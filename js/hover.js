@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     //Package-Hover
     $(".package").hover(function () {
-        $(this).css({
+        $(this).animate({
             height: '+=5%',
             width: '+=5%',
             marginTop: '-=20px',
@@ -10,14 +10,14 @@ $(document).ready(function () {
             //paddingBottom: '-=20px'
         });
 
-        $(this).children("img").css("height", "+=10px");
-        $(this).children(".price").css({paddingTop: '+=10px'});
-        $(this).children(".buttons").css({
+        $(this).children("img").animate("height", "+=10px");
+        $(this).children(".price").animate({paddingTop: '+=10px'});
+        $(this).children(".buttons").animate({
             //marginLeft: "+=10px"
             //paddingTop: "+=10px"
         });
     }, function () {
-        $(this).css({
+        $(this).animate({
             height: '-=5%',
             width: '-=5%',
             marginTop: '+=20px',
@@ -25,9 +25,9 @@ $(document).ready(function () {
             //paddingBottom: '+=20px'
         });
 
-        $(this).children("img").css("height", "-=10px");
-        $(this).children(".price").css({paddingTop: '-=10px'});
-        $(this).children(".buttons").css({
+        $(this).children("img").animate("height", "-=10px");
+        $(this).children(".price").animate({paddingTop: '-=10px'});
+        $(this).children(".buttons").animate({
             //marginLeft: "-=10px"
             //paddingTop: "-=10px"
         });
