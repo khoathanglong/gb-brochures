@@ -1,22 +1,56 @@
 body {
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
 }
 
 h2 {
+    padding: 0;
     margin: 0;
 }
+
+a {
+    text-decoration: none;
+}
+
 
 /* ---------- HEADER ----------- */
 .menu {
     position: fixed;
     z-index: 1;
     width: 100%;
+    max-width: 100vw;
     background-color: #303030;
     color: #fff;
     height: 80px;
     -webkit-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
     -moz-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
     box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
+}
+
+#mobilemenu {
+    float: right;
+    font-size: 28px;
+    line-height: 80px;
+    margin-right: 20px;
+}
+
+#mobilemenu:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.show-mobile {
+    display: none;
 }
 
 .logo {
@@ -122,8 +156,7 @@ h2 {
 }
 
 .pinkHr, .shortPinkHr {
-    border-width: 2px;
-    border-color: #e75152;
+    border: 2px solid #e75152;
     text-align: center;
 }
 
@@ -157,8 +190,7 @@ h2 {
 
 .package {
     position: relative;
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin: 60px auto;
     padding-bottom: 20px;
     width: 60%;
     background-color: white;
@@ -201,6 +233,7 @@ h2 {
 }
 
 .button-white, .button-pink, .button-pink-dark {
+    margin: 5px;
     padding: 7px 20px;
     border-radius: 20px;
     font-weight: 800;
@@ -208,6 +241,13 @@ h2 {
     -webkit-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
     -moz-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
     box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
+}
+
+.buttons {
+    display: flex;
+    margin-left: 0;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .button-white:hover, .button-pink:hover, .button-pink-dark:hover {
@@ -218,7 +258,6 @@ h2 {
 .button-white {
     color: #e75152;
     border: 2px solid #e75152;
-    margin-left: 12px;
 }
 
 .button-white:hover {
@@ -247,15 +286,36 @@ h2 {
     background-color: #c2494a;
 }
 
+.small-wrapper {
+    width: 70%;
+    margin: 40px auto;
+}
+
 .youtube-wrapper {
-    width: 560px;
-    max-width: 100%;
-    margin: 30px auto;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    -webkit-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
+    -moz-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
+    box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
+}
+
+.youtube-wrapper iframe,
+.youtube-wrapper object,
+.youtube-wrapper embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 /* ---------- FOOTER ------------ */
 /*---- Pink footer-part ----*/
 .contact {
+    margin-top: 50px;
     min-height: 120px;
     position: relative;
     color: #fff;
@@ -300,7 +360,7 @@ h2 {
 .privacy-copyright {
     font-size: 12px;
     font-weight: 400;
-    height: 80px;
+    min-height: 80px;
     background-color: #303030;
     color: #fff;
 }
@@ -315,7 +375,7 @@ h2 {
     float: left;
     margin-top: 20px;
     margin-bottom: 10px;
-    margin-left: 50px;
+    margin-left: 90px;
 }
 
 .privacy-copyright .nav-bar li a {
@@ -340,4 +400,127 @@ h2 {
 
 .gb-icon {
     height: 15px;
+}
+
+/* --------- MEDIA QUERIES ------------ */
+@media (max-width: 960px) {
+    .contact .section-heading, .address, .mail-phone, .contact-btn {
+        width: 33%;
+        display: block;
+        margin-left: 33%;
+        text-align: center;
+    }
+
+    .address, .mail-phone, .contact-btn {
+        height: 50px;
+    }
+}
+
+@media (max-width: 765px) {
+    .privacy-copyright {
+        text-align: center;
+    }
+
+    .copyright {
+        text-align: center;
+        width: auto;
+        margin: auto;
+        padding-top: 60px;
+        padding-bottom: 20px;
+    }
+
+    .privacy-copyright ul {
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+
+    .privacy-copyright li {
+        float: none;
+        display: inline-block;
+    }
+
+    .privacy-copyright .nav-bar li {
+        width: 100%;
+        line-height: 20px;
+        margin-right: 0;
+    }
+
+    .privacy-copyright .nav-bar, .socialmedia {
+        margin-left: 0;
+        padding-top: 20px;
+    }
+
+    .privacy-copyright .nav-bar, .socialmedia, .copyright {
+        height: 20px;
+        float: none;
+    }
+}
+
+@media (max-width: 666px) {
+    .address, .mail-phone, .contact-btn {
+        height: 100px;
+    }
+}
+
+@media (max-width: 555px) {
+    .contact .section-heading, .address, .mail-phone, .contact-btn {
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    #mainmenu {
+        display: block;
+    }
+
+    .menu .nav-bar {
+        margin-right: 20px;
+    }
+
+    .nav-bar li {
+        margin-right: 20px;
+    }
+
+    .logo {
+        margin-left: 20px;
+    }
+
+    .intro {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 430px) {
+    .show-mobile {
+        display: block;
+    }
+
+    #mainmenu {
+        display: none;
+        width: 100%;
+        margin: 0;
+    }
+
+    .menu li {
+        background-color: rgba(255,255,255,0.7);
+        line-height: 50px;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #303030;
+        margin: 0;
+    }
+
+    .menu li a {
+        color: #303030;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+    }
+}
+
+@media (max-width: 378px) {
+    .contact .section-heading, .address, .mail-phone, .contact-btn {
+        width: 80%;
+        margin-left: 10%;
+    }
 }

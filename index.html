@@ -2,22 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
     <title>Globuzzer</title>
 
     <!------ STYLESHEETS ------->
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900|Source+Sans+Pro" rel="stylesheet">
+    <!-- Simple grid -->
+    <link rel="stylesheet" href="css/simple-grid.css">
     <!-- Own stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 
     <!------ SCRIPTS ------->
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <!-- Font Awesome -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 </head>
@@ -25,7 +24,8 @@
 <header>
     <div class="menu">
         <div class="logo"><a href="#"><img src="img/globuzzerLogo.png" alt="gb-logo"></a></div>
-        <ul class="nav-bar">
+        <div id="mobilemenu" class="show-mobile"><span class="fa fa-bars"></span></div>
+        <ul id="mainmenu" class="nav-bar">
             <li><a href="#">Home</a></li>
             <li><a href="#">My package</a></li>
         </ul>
@@ -47,7 +47,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-12 quote">
+        <div class="col-12 quote">
             <hr class="shortPinkHr">
             <p>Sit amet consectetur adipisicing elit, sed do eiusmo. Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                 veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
@@ -55,14 +55,14 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-12">
             <h2 class="section-heading"><span>Our</span> Packages</h2>
             <hr class="pinkHr">
         </div>
     </div>
     <div class="row packages">
         <div class="greybox"></div>
-        <div class="col-sm-4">
+        <div class="col-4">
             <div class="package">
                 <h2 class="section-heading"><span>6 Hours</span><br>Package</h2>
                 <img class="brochure-img" src="img/6-hours-brochure.png" alt="6-hours-brochure">
@@ -74,7 +74,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-4">
             <div class="package">
                 <h2 class="section-heading"><span>1 Day</span><br>Package</h2>
                 <img class="brochure-img" src="img/1-day-brochure.png" alt="1-day-brochure">
@@ -86,7 +86,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-4">
             <div class="package">
                 <h2 class="section-heading"><span>2 Days</span><br>Package</h2>
                 <img class="brochure-img" src="img/2-days-brochure.png" alt="2-days-brochure">
@@ -100,11 +100,13 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-12">
             <h2 class="section-heading"><span>Want to </span>know more?</h2>
             <hr class="pinkHr">
-            <div class="youtube-wrapper">
-                <iframe align="middle" width="560" height="315" src="https://www.youtube.com/embed/Jv-qDUEkMC4?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+            <div class="small-wrapper">
+                <div class="youtube-wrapper">
+                    <iframe align="middle" width="560" height="315" src="https://www.youtube.com/embed/Jv-qDUEkMC4?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
     </div>
@@ -112,37 +114,37 @@
 
 <footer>
     <div class="row contact">
-        <div class="col-sm-3">
+        <div class="col-3">
             <h2 class="section-heading"><span>Contact </span>us</h2>
         </div>
-        <div class="col-sm-3">
+        <div class="col-3">
             <div class="address"><i class="fas fa-map-marker"></i> Lindstedtsvägen 24, 4thFloor,<br><span>11428 Stockholm, Sweden</span></div>
         </div>
-        <div class="col-sm-3">
+        <div class="col-3">
             <div class="mail-phone">
                 <i class="fas fa-envelope"></i> rami@globuzzer.com <br>
                 <i class="fas fa-phone"></i> +46 73 555 5 134
             </div>
         </div>
-        <div class="col-sm-3">
+        <div class="col-3">
             <div class="contact-btn">
                 <a class="button-pink-dark">Drop us a line</a>
             </div>
         </div>
     </div>
     <div class="privacy-copyright">
-        <ul class="nav-bar">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
-            <li><a href="#">Contact us</a></li>
-        </ul>
         <ul class="socialmedia">
             <li><a href="https://www.globuzzer.com/"><img class="gb-icon" src="img/GB%20icon.png" alt="gb-icon"></a></li>
             <li><a href="https://www.facebook.com/Globuzzer/"><i class="fab fa-facebook-f"></i></a></li>
             <li><a href="https://twitter.com/globuzzer"><i class="fab fa-twitter"></i></a></li>
             <li><a href="https://www.pinterest.at/globuzzer/"><i class="fab fa-pinterest"></i></a></li>
             <li><a href="https://www.linkedin.com/company/globuzzer"><i class="fab fa-linkedin-in"></i></a></li>
+        </ul>
+        <ul class="nav-bar">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Contact us</a></li>
         </ul>
         <br>
         <p class="copyright">&copy; Copyright statement</p>
