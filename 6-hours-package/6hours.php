@@ -9,6 +9,7 @@
     <!------ STYLESHEETS ------->
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900|Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:900" rel="stylesheet">
     <!-- Simple grid -->
     <link rel="stylesheet" href="../css/simple-grid.css">
     <!-- Own stylesheet -->
@@ -37,9 +38,153 @@
                 in 6 hours
             </h2>
         </div>
+        <i class="fas fa-chevron-circle-down"></i>
         <div class="white-box"></div>
     </div>
 </header>
+
+<div class="brochure-viewer">
+    <h4>Welcome!</h4>
+    <p>Are you interested in discovering Sweden?<br>
+        Just open the brochure, take a look at our<br>
+        services and choose the ones you like.
+    </p>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <form id="filter" method="POST">
+                <select name="filter" class="pink-select">
+                    <option value="filter">Filters</option>
+                    <option value="arts-museums">Arts & Museums</option>
+                    <option value="city-tour">City Tour</option>
+                    <option value="food-related">Food Related</option>
+                    <option value="inside-programs">Inside Programs</option>
+                    <option value="outside-programs">Outside Programs</option>
+                    <option value="water-related">Water Related</option>
+                </select>
+            </form>
+            <form id="featured" method="POST">
+                <select name="featured" class="pink-select">
+                    <option value="featured">Featured</option>
+                    <option value="oslo">Oslo</option>
+                </select>
+            </form>
+            <hr class="fine-hr">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 services">
+            <div class="thumbnail-container">
+                <div class="hover-container">
+                    <div class="thumbnail" style="background-image:url(../img/service1.jpg)"></div>
+                    <div class="color-overlay"></div>
+                    <div class="service-desc">
+                        <h3>Bus Trip</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                        <a class="button-pink"><img src="../img/icon3_book.png" alt="book"> Read more</a>
+                    </div>
+                </div>
+                <img src="../img/icon3_check.png" alt="check" class="check">
+                <img src="../img/icon3_hearth.png" alt="heart" class="heart">
+            </div>
+            <div class="thumbnail-container">
+                <div class="hover-container">
+                    <div class="thumbnail" style="background-image:url(../img/service2.jpg)"></div>
+                    <div class="color-overlay"></div>
+                    <div class="service-desc">
+                        <h3>Boat Trip</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                        <a class="button-pink"><img src="../img/icon3_book.png" alt="book"> Read more</a>
+                    </div>
+                </div>
+                <img src="../img/icon3_check.png" alt="check" class="check">
+                <img src="../img/icon3_hearth.png" alt="heart" class="heart">
+            </div>
+            <div class="thumbnail-container">
+                <div class="hover-container">
+                    <div class="thumbnail" style="background-image:url(../img/service3.jpg)"></div>
+                    <div class="color-overlay"></div>
+                    <div class="service-desc">
+                        <h3>Surf Trip</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                        <a class="button-pink"><img src="../img/icon3_book.png" alt="book"> Read more</a>
+                    </div>
+                </div>
+                <img src="../img/icon3_check.png" alt="check" class="check">
+                <img src="../img/icon3_hearth.png" alt="heart" class="heart">
+            </div>
+            <div class="thumbnail-container">
+                <div class="hover-container">
+                    <div class="thumbnail" style="background-image:url(../img/service4.jpg)"></div>
+                    <div class="color-overlay"></div>
+                    <div class="service-desc">
+                        <h3>Cabin Trip</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                        <a class="button-pink"><img src="../img/icon3_book.png" alt="book"> Read more</a>
+                    </div>
+                </div>
+                <img src="../img/icon3_check.png" alt="check" class="check">
+                <img src="../img/icon3_hearth.png" alt="heart" class="heart">
+            </div>
+        </div>
+        <div class="col-12 services">
+            <div class="thumbnail-container">
+                <div class="hover-container">
+                    <div class="thumbnail" style="background-image:url(../img/service5.jpg)"></div>
+                    <div class="color-overlay"></div>
+                    <div class="service-desc">
+                        <h3>Museum Trip</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                        <a class="button-pink"><img src="../img/icon3_book.png" alt="book"> Read more</a>
+                    </div>
+                </div>
+                <img src="../img/icon3_check.png" alt="check" class="check">
+                <img src="../img/icon3_hearth.png" alt="heart" class="heart">
+            </div>
+            <div class="thumbnail-container">
+                <div class="hover-container">
+                    <div class="thumbnail" style="background-image:url(../img/service6.jpg)"></div>
+                    <div class="color-overlay"></div>
+                    <div class="service-desc">
+                        <h3>Forest Trip</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                        <a class="button-pink"><img src="../img/icon3_book.png" alt="book"> Read more</a>
+                    </div>
+                </div>
+                <img src="../img/icon3_check.png" alt="check" class="check">
+                <img src="../img/icon3_hearth.png" alt="heart" class="heart">
+            </div>
+            <div class="thumbnail-container">
+                <div class="hover-container">
+                    <div class="thumbnail" style="background-image:url(../img/service7.jpg)"></div>
+                    <div class="color-overlay"></div>
+                    <div class="service-desc">
+                        <h3>Dessert Trip</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                        <a class="button-pink"><img src="../img/icon3_book.png" alt="book"> Read more</a>
+                    </div>
+                </div>
+                <img src="../img/icon3_check.png" alt="check" class="check">
+                <img src="../img/icon3_hearth.png" alt="heart" class="heart">
+            </div>
+            <div class="thumbnail-container">
+                <div class="hover-container">
+                    <div class="thumbnail" style="background-image:url(../img/service8.jpg)"></div>
+                    <div class="color-overlay"></div>
+                    <div class="service-desc">
+                        <h3>Fun Park Trip</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                        <a class="button-pink"><img src="../img/icon3_book.png" alt="book"> Read more</a>
+                    </div>
+                </div>
+                <img src="../img/icon3_check.png" alt="check" class="check">
+                <img src="../img/icon3_hearth.png" alt="heart" class="heart">
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <footer>

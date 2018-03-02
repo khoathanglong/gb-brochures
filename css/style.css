@@ -18,6 +18,11 @@ h2 {
     margin: 0;
 }
 
+h4 {
+    padding: 0;
+    margin: 0;
+}
+
 a {
     text-decoration: none;
 }
@@ -104,6 +109,23 @@ a {
     height: calc(100vh - 80px);
 }
 
+.img-header.package-view svg:not(:root).svg-inline--fa {
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin-left: 50%;
+    margin-right: 50%;
+    transition: 5s ease;
+}
+
+.img-header.package-view .svg-inline--fa:hover {
+    cursor: pointer;
+    font-size: 22px;
+}
+
 .intro {
     position: absolute;
     top: 0;
@@ -125,14 +147,26 @@ a {
     font-size: 17px;
 }
 
-.img-header select {
+.intro p.curr-package {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 400;
+    color: #cf4848;
+    margin-bottom: 10px;
+}
+
+.curr-package span {
+    font-family: 'Lato', sans-serif;
+    color: #8d8a8a;
+    font-size: 27px;
+    font-weight: 900;
+}
+
+.pink-select {
     /*for firefox*/
     -moz-appearance: none;
     /*for chrome*/
     -webkit-appearance:none;
-    position: absolute;
-    right: 5px;
-    bottom: 5px;
     border: 3px solid #cf4848;
     border-radius: 5%;
     font-weight: 700;
@@ -147,9 +181,15 @@ a {
     padding-right: 50px;
 }
 
-.img-header select::-ms-expand {
+.pink-select::-ms-expand {
     /*IE*/
     display: none;
+}
+
+.img-header .pink-select {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
 }
 
 /* -- 6-hours-page -- */
@@ -320,6 +360,7 @@ a {
 
 .button-pink:hover, .button-pink-dark:hover {
     color: rgb(252, 214, 202);
+    background-color: #b34849;
 }
 
 .button-pink-dark {
@@ -354,6 +395,113 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+/* -- Brochure Viewer -- */
+.brochure-viewer {
+    color: #fff;
+    background-image: url('../img/background pattern behind the brochure.png');
+    height: 500px;
+    width: 100%;
+}
+
+.brochure-viewer h4 {
+    text-transform: uppercase;
+}
+
+/* -- Service-Thumbnails -- */
+#filter select, #featured select {
+    float: right;
+    margin: 5px;
+    -webkit-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
+    -moz-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
+    box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
+}
+
+.fine-hr {
+    clear: both;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+}
+
+.thumbnail-container {
+    margin: 10px;
+}
+
+.thumbnail-container .heart, .thumbnail-container .check {
+    height: 25px;
+    float: right;
+    margin-top: 10px;
+    margin-left: 4px;
+}
+
+.hover-container {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    -webkit-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
+    -moz-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
+    box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
+}
+
+.thumbnail {
+    opacity: 1;
+    display: block;
+    float: left;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.service-desc {
+    color: #fff;
+    padding: 10px;
+}
+
+.service-desc p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.service-desc .button-pink {
+    border-color: #fff;
+    margin-top: 20px;
+}
+
+.service-desc .button-pink img {
+    height: 14px;
+    width: 20px;
+    object-fit: cover;
+}
+
+.color-overlay, .service-desc {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    transition: .5s ease;
+    opacity: 0;
+    text-align: center;
+}
+
+.color-overlay {
+    background-color: #e75152;
+}
+
+.hover-container:hover .color-overlay {
+    opacity: 0.8;
+}
+
+.hover-container:hover .service-desc {
+    cursor: pointer;
+    opacity: 1;
 }
 
 /* ---------- FOOTER ------------ */
