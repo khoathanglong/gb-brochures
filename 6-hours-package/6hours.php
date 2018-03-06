@@ -44,15 +44,33 @@
 </header>
 
 <div class="brochure-viewer">
-    <h4>Welcome!</h4>
-    <p>Are you interested in discovering Sweden?<br>
-        Just open the brochure, take a look at our<br>
-        services and choose the ones you like.
-    </p>
+    <div class="container">
+        <div class="row">
+            <div class='col-6 welcome-text'>
+                <div>
+                    <h1>Welcome!</h1>
+                    <p>Are you interested in discovering Sweden?</p>
+                    <p>Just open the brochure, take a look at our</p>
+                    <p>services and choose the ones you like.</p>
+                </div>
+            </div>
+
+            <div class="arrow">
+                <img class='normalArrow' src="../img/secondPage-arrow.png" alt="arrow">
+            </div>
+            <div class="arrow">
+                <img class='mobileArrow' src="../img/mobile-secondPage-arrow.png" alt="arrow">
+            </div>
+
+            <div class='col-6'>
+                <img class='img-responsive' src="../img/BROCHURE 6 hours mockup.jpg" alt="BROCHURE">
+            </div>        
+        </div> 
+    </div>
 </div>
 
 <div class="container">
-    <div class="row">
+    <div class="row" id='filterForm'>
         <div class="col-12">
             <form id="filter" method="POST">
                 <select name="filter" class="pink-select">
