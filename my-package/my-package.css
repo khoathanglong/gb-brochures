@@ -1,0 +1,48 @@
+/* ---- Content ---- */
+.brochure-container {
+    height: 500px;
+}
+
+.grey-heading {
+    font-weight: 400;
+    color: #555151;
+    margin-top: 200px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.grey-heading span {
+    font-weight: 700;
+}
+
+#my-brochure {
+    position: absolute;
+    width: 500px;
+    top: 168px;
+    right: 20px;
+}
+
+.buttons.left {
+    margin-top: 20px;
+    justify-content: left;
+}
+
+.edge-btn-pink, .edge-btn-white {
+    border-radius: 5px;
+    border: 1px solid;
+    padding: 10px 20px;
+}
+
+.edge-btn-pink {
+    background-color: #e75152;
+    color: #fff;
+}
+
+.edge-btn-white {
+    border-color: #e75152;
+    color: #e75152;
+}
+
+.light-grey-box {
+    background-color: #e5e5e5;
+}
