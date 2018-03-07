@@ -41,9 +41,9 @@
                 Here you can find your<br>
                 <span>printable brochure</span>
             </h2>
-            <p class="check-point"><i class="fas fa-check"></i> 6 hours package</p>
-            <p class="check-point"><i class="fas fa-check"></i> Discover Sweden</p>
-            <p class="check-point"><i class="fas fa-check"></i> 5 services</p>
+            <p class="check-point"><span><i class="fas fa-check"></i></span> 6 hours package</p>
+            <p class="check-point"><span><i class="fas fa-check"></i></span> Discover Sweden</p>
+            <p class="check-point"><span><i class="fas fa-check"></i></span> 5 services</p>
 
             <div class="buttons left">
                 <a href="#" class="edge-btn-pink">Save it in PDF</a>
@@ -75,7 +75,7 @@
         <div class="chosen-services">
             <h3>Aren't these the services you wanted?</h3>
             <p>Delete the ones you are not interested in or go back and add the ones you missed.</p>
-            <hr>
+            <hr class="shortHr">
             <div class="service-card">
                 <div class="img" style="background-image: url('../img/service1.jpg')"></div>
                 <div class="service-card-desc">
