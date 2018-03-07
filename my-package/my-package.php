@@ -56,28 +56,85 @@
 </div>
 
 <div class="light-grey-box">
-    <div class="basket">
-        <p id="curr-package">Discover Sweden in 6 hours</p>
-        <p><span id="amount">5</span> services</p>
-        <p class="total-price">Price <span id="price">99€</span></p>
-        <div class="buttons">
-            <a class="button-pink">Add more</a>
-            <a class="button-white">Checkout</a>
-        </div>
+    <div class="arrow-container">
+        <p><i class="fas fa-chevron-circle-down"></i></p>
     </div>
+    <div class="service-container">
+        <div class="basket">
+            <p id="curr-package">Discover Sweden in 6 hours</p>
+            <p><span id="amount">5</span> services</p>
+            <hr>
+            <p class="total-price"><span class="price-label">Price:</span> <span id="price">99€</span></p>
+            <hr>
+            <div class="buttons">
+                <a class="button-pink">Add more</a>
+                <a class="button-white">Checkout</a>
+            </div>
+        </div>
 
-    <div class="chosen-services">
-        <h3>Aren't these the services you wanted?</h3>
-        <p>Delete the ones you are not interested in or go back and add the ones you missed.</p>
-        <hr>
-
+        <div class="chosen-services">
+            <h3>Aren't these the services you wanted?</h3>
+            <p>Delete the ones you are not interested in or go back and add the ones you missed.</p>
+            <hr>
+            <div class="service-card">
+                <div class="img" style="background-image: url('../img/service1.jpg')"></div>
+                <div class="service-card-desc">
+                    <h1>Transport</h1>
+                    <p>Lorem ipsum dolor sit amet<br>
+                        Lorem ipsum dolor...</p>
+                    <hr>
+                    <a href="#" class="delete-btn">Delete</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="img" style="background-image: url('../img/service2.jpg')"></div>
+                <div class="service-card-desc">
+                    <h1>Boat Trip</h1>
+                    <p>Lorem ipsum dolor sit amet<br>
+                        Lorem ipsum dolor...</p>
+                    <hr>
+                    <a href="#" class="delete-btn">Delete</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="img" style="background-image: url('../img/service5.jpg')"></div>
+                <div class="service-card-desc">
+                    <h1>Museum Tour</h1>
+                    <p>Lorem ipsum dolor sit amet<br>
+                        Lorem ipsum dolor...</p>
+                    <hr>
+                    <a href="#" class="delete-btn">Delete</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="img" style="background-image: url('../img/service6.jpg')"></div>
+                <div class="service-card-desc">
+                    <h1>Nature</h1>
+                    <p>Lorem ipsum dolor sit amet<br>
+                        Lorem ipsum dolor...</p>
+                    <hr>
+                    <a href="#" class="delete-btn">Delete</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="img" style="background-image: url('../img/service7.jpg')"></div>
+                <div class="service-card-desc">
+                    <h1>Local food tour</h1>
+                    <p>Lorem ipsum dolor sit amet<br>
+                        Lorem ipsum dolor...</p>
+                    <hr>
+                    <a href="#" class="delete-btn">Delete</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
 <footer>
     <div class="privacy-copyright">
         <ul class="socialmedia">
-            <li><a href="https://www.globuzzer.com/"><img class="gb-icon" src="../img/GB%20icon.png" alt="gb-icon"></a></li>
+            <li><a href="https://www.globuzzer.com/"><img class="gb-icon" src="../img/GB%20icon.png" alt="gb-icon"></a>
+            </li>
             <li><a href="https://www.facebook.com/Globuzzer/"><i class="fab fa-facebook-f"></i></a></li>
             <li><a href="https://twitter.com/globuzzer"><i class="fab fa-twitter"></i></a></li>
             <li><a href="https://www.pinterest.at/globuzzer/"><i class="fab fa-pinterest"></i></a></li>
