@@ -78,7 +78,7 @@
             <p>Delete the ones you are not interested in or go back and add the ones you missed.</p>
             <hr class="shortHr">
             <div class="service-card">
-                <div class="img" style="background-image: url('../img/service1.jpg')"></div>
+                <div class="img" style="background-image: url('../img/service1.png')"></div>
                 <div class="service-card-desc">
                     <h1>Transport</h1>
                     <p>Lorem ipsum dolor sit amet<br>
@@ -88,7 +88,7 @@
                 </div>
             </div>
             <div class="service-card">
-                <div class="img" style="background-image: url('../img/service2.jpg')"></div>
+                <div class="img" style="background-image: url('../img/service2.png')"></div>
                 <div class="service-card-desc">
                     <h1>Boat Trip</h1>
                     <p>Lorem ipsum dolor sit amet<br>
@@ -98,7 +98,7 @@
                 </div>
             </div>
             <div class="service-card">
-                <div class="img" style="background-image: url('../img/service5.jpg')"></div>
+                <div class="img" style="background-image: url('../img/service5.png')"></div>
                 <div class="service-card-desc">
                     <h1>Museum Tour</h1>
                     <p>Lorem ipsum dolor sit amet<br>
@@ -108,7 +108,7 @@
                 </div>
             </div>
             <div class="service-card">
-                <div class="img" style="background-image: url('../img/service6.jpg')"></div>
+                <div class="img" style="background-image: url('../img/service6.png')"></div>
                 <div class="service-card-desc">
                     <h1>Nature</h1>
                     <p>Lorem ipsum dolor sit amet<br>
@@ -118,7 +118,7 @@
                 </div>
             </div>
             <div class="service-card">
-                <div class="img" style="background-image: url('../img/service7.jpg')"></div>
+                <div class="img" style="background-image: url('../img/service7.png')"></div>
                 <div class="service-card-desc">
                     <h1>Local food tour</h1>
                     <p>Lorem ipsum dolor sit amet<br>
