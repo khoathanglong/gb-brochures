@@ -109,21 +109,22 @@ a {
     height: calc(100vh - 80px);
 }
 
-.img-header.package-view svg:not(:root).svg-inline--fa {
+#header-moving-down{
     position: absolute;
     color: #fff;
     font-size: 20px;
     bottom: 10px;
     left: 0;
     right: 0;
-    margin-left: 50%;
-    margin-right: 50%;
-    transition: 5s ease;
+    text-align: center;
+    z-index: 1;
+    
+    /*transition: 5s ease;*/
 }
 
 .img-header.package-view .svg-inline--fa:hover {
     cursor: pointer;
-    font-size: 22px;
+    
 }
 
 .intro {
@@ -444,28 +445,74 @@ a {
     margin-bottom: 10px;
 }
 
+#moving-down-icon{
+        display: none;
+        text-align: center;
+        font-size: 4em;
+} 
+#moving-down-icon p {
+        font-size: 48px;
+        color: #fff;
+        margin-bottom: 40px;
+}   
+/*.moving-down-icon{
+    display: none;
+}
+*/
 /* -- Service-Thumbnails -- */
 #filterForm{
     margin-top: 40px;
     margin-bottom: 20px;
-    
+    display:flex;
+    justify-content: right;
 }
 
+#filterForm  form {
+    margin-right: 15px;
+}
 #filter select, #featured select {
-    float: right;
-    margin: 5px;
     -webkit-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
     -moz-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
     box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
+    text-align: center;
+}
+
+#filter select {
+      /*for firefox*/
+    -moz-appearance: none;
+    /*for chrome*/
+    -webkit-appearance:none;
+    border: 3px solid #cf4848;
+    border-radius: 5%;
+    font-weight: 700;
+    color: #595858;
+    overflow: hidden;
+    background: url('../img/arrow.png') no-repeat right rgba(255,255,255,0.7);
+    background-size: 20px 22px;
+    background-position: 95% 50%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 20px;
 }
 
 .fine-hr {
     clear: both;
+    
+    border:none;
+    border-bottom: solid 2.5px rgb(207, 72, 72)
+
 }
 
+#supplementalDiv{
+    background-color:#CDCDCD;
+    height: 20px;
+}
 .services {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
+    
 }
 
 .thumbnail-container {
@@ -490,8 +537,8 @@ a {
 
 .thumbnail {
     opacity: 1;
-    display: block;
-    float: left;
+    /*display: block;
+    float: left;*/
     height: 100%;
     width: 100%;
     background-position: center;
@@ -544,7 +591,9 @@ a {
     cursor: pointer;
     opacity: 1;
 }
-
+#services-block{
+    margin-bottom: 40px;
+}
 /* ---------- FOOTER ------------ */
 /*---- Pink footer-part ----*/
 .contact {
@@ -629,6 +678,7 @@ a {
 
 .socialmedia li a {
     color: #fff;
+
 }
 
 .gb-icon {
@@ -647,7 +697,23 @@ a {
     .address, .mail-phone, .contact-btn {
         height: 50px;
     }
+    /*intro for small screen*/
+    .intro{
+        top:25%;
+        left: 10%;
+        margin:0;
+        padding:0;
+    }
+    .intro h2 {
+        font-size: 2.5em;
+    }
 
+    .intro p {
+  
+        font-size: 1.5em;
+    }
+
+    
     /* -- Brochure Viewer for Small Sceen-- */
     .brochure-viewer .welcome-text{
         position: relative;
@@ -676,6 +742,92 @@ a {
         display:initial;
         padding:100px 0;
     }
+
+    .services{
+        flex-flow: row wrap;
+    }
+
+   .thumbnail-container {
+        flex-basis: 33%; /*let a block takes up 33% of the flex row for responsive*/
+        text-align: center;
+    }
+
+    .hover-container{   
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .thumbnail-container .heart, .thumbnail-container .check {
+        height:80px;
+        float:none;
+        margin-top: 20px;
+       text-shadow: 2px 2px rgba(0,0,0,1);
+    }
+   
+    #mobileButtons {
+        display:flex;
+        justify-content: center;
+        background-color: #E75152;
+        padding:10px 0;
+        border-top: solid 4px #AD4248 ;
+        border-bottom:solid 4px #AD4248 ;
+        border-left: solid 2px #AD4248 ;
+        border-right:solid 2px #AD4248 ;
+        
+    }
+    #mobileButtons div{
+        cursor: pointer;
+        text-align: center;
+        font-family: Roboto;
+        font-size: 38px;
+        font-weight: bold;
+        color:#fff;
+        border: solid 3px #585252;
+        flex-basis: 40%;
+        width: 100%;
+        padding:15px 20px;
+
+   }
+   #filterButton{
+      border-radius: 8px 0 0 8px;
+      background-color: #949494;
+   }
+    #featureButton{
+      border-radius: 0 8px 8px 0;
+      background-color: #BDBDBD;
+   }
+    
+    #filterForm{
+        max-width: 100%;
+        background-color: #C74746;
+        margin-top: 0;
+        justify-content: center;
+    }
+
+    #filter div {
+        cursor: pointer;
+        width: 100%;
+        margin:25px 0;
+   }
+   #filter div p{
+        display: inline-block;
+        font-size: 2em;
+        font-weight: normal;
+        color:#fff;
+        margin:0 15px;
+   }
+    
+    #moving-down-icon{
+        cursor: pointer;
+        display: block;
+        
+    } 
+    #header-moving-down{
+        font-size: 4em;
+}
+   
+    
+ 
 }
 
 @media (max-width: 765px) {
@@ -738,7 +890,12 @@ a {
     .brochure-viewer .mobileArrow {
         height:480px ;
     }
+
+    #filter div p{
+        font-size: 24px;
+   }
 }
+
 
 @media (max-width: 666px) {
     .address, .mail-phone, .contact-btn {
@@ -756,7 +913,10 @@ a {
     .brochure-viewer .mobileArrow {
         height:400px ;
     }
+   
 }
+
+
 
 @media (max-width: 555px) {
     .contact .section-heading, .address, .mail-phone, .contact-btn {
@@ -796,6 +956,10 @@ a {
     .brochure-viewer .mobileArrow {
         height:320px ;
     }
+
+    #filter div p{  /*got problem with @media: does not work at the right size*/
+        font-size: 16px;
+   }
 }
 
 @media (max-width: 430px) {
@@ -836,6 +1000,7 @@ a {
         font-size: 16px;
         color:#ededed;
     }
+
 }
 
 @media (max-width: 378px) {

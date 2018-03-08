@@ -20,9 +20,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Font Awesome -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
 </head>
 <body>
 <header>
+    <div>
     <div class="menu">
         <div class="logo"><a href="#"><img src="../img/globuzzerLogo.png" alt="gb-logo"></a></div>
         <div id="mobilemenu" class="show-mobile"><span class="fa fa-bars"></span></div>
@@ -38,9 +40,12 @@
                 in 6 hours
             </h2>
         </div>
-        <i class="fas fa-chevron-circle-down"></i>
-        <div class="white-box"></div>
+        <div id='header-moving-down'>
+            <i  class="fas fa-chevron-circle-down"></i>
+        </div>
     </div>
+    <div class="white-box"></div>
+</div>
 </header>
 
 <div class="brochure-viewer">
@@ -65,16 +70,25 @@
             <div class='col-6'>
                 <img class='img-responsive' src="../img/BROCHURE 6 hours mockup.jpg" alt="BROCHURE">
             </div>        
-        </div> 
+        </div>
+        <div id="moving-down-icon">
+            <p>Or jump to see all the services</p>
+            <i  class="fas fa-chevron-circle-down"></i>
+        </div>
     </div>
+
+</div>
+<div id='supplementalDiv'></div>
+
+<div id='mobileButtons'>
+        <div id="filterButton">Filters</div>
+        <div id="featureButton">Featured</div>
 </div>
 
-<div class="container">
-    <div class="row" id='filterForm'>
-        <div class="col-12">
+<div class="container" id='filterForm'>
             <form id="filter" method="POST">
-                <select name="filter" class="pink-select">
-                    <option value="filter">Filters</option>
+                <select name="filter" >
+                    <option value="filter" selected>Filters</option>
                     <option value="arts-museums">Arts & Museums</option>
                     <option value="city-tour">City Tour</option>
                     <option value="food-related">Food Related</option>
@@ -83,17 +97,19 @@
                     <option value="water-related">Water Related</option>
                 </select>
             </form>
+ 
             <form id="featured" method="POST">
                 <select name="featured" class="pink-select">
-                    <option value="featured">Featured</option>
+                    <option value="featured" selected hidden disabled>Featured</option>
                     <option value="oslo">Oslo</option>
                 </select>
             </form>
-            <hr class="fine-hr">
-        </div>
-    </div>
+</div>   
+
+<div id='services-block' class="container">
+    <hr class="fine-hr">
     <div class="row">
-        <div class="col-12 services">
+        <div class="services">
             <div class="thumbnail-container">
                 <div class="hover-container">
                     <div class="thumbnail" style="background-image:url(../img/service1.jpg)"></div>
@@ -147,9 +163,11 @@
                 <img src="../img/icon3_hearth.png" alt="heart" class="heart">
             </div>
         </div>
-        <div class="col-12 services">
-            <div class="thumbnail-container">
-                <div class="hover-container">
+    </div>
+    <div class="row">
+        <div class=" services">
+            <div class="thumbnail-container ">
+                <div class="hover-container ">
                     <div class="thumbnail" style="background-image:url(../img/service5.jpg)"></div>
                     <div class="color-overlay"></div>
                     <div class="service-desc">
@@ -224,4 +242,71 @@
         <p class="copyright">&copy; Copyright statement</p>
     </div>
 </footer>
+
+<script>
+
+$(document).ready(function () {
+    var mobileFilterItems= '<div>'+
+                    '<p value="All" style="text-decoration:underline">All</p>'+
+                    '<p value="arts-museums">Arts & Museums</p>'+
+                    '<p value="city-tour">City Tour</p>'+
+                    '<p value="food-related">Food Related</p>'+
+                '</div>'
+                   //  '<li value="inside-programs">Inside Programs</li>'+
+                   //  '<li value="outside-programs">Outside Programs</li>'+
+                   // '<li value="water-related">Water Related</li>'+
+    function responsiveFilters(){
+        if( $('.normalArrow').css('display')=='none'){ //when the screen is small
+            $('#supplementalDiv').show();
+            $('#mobileButtons').show();
+            $('#filter select').replaceWith(mobileFilterItems)
+
+            $('#featured select').replaceWith(
+               '<ul name="featured"  style="list-style-type:none;display:none">'+
+                    '<li value="oslo">Oslo</li>'+
+                '</ul>' 
+            )
+        }else{
+            $('#supplementalDiv').hide();
+            $('#mobileButtons').hide();
+            $('#filter div').replaceWith(
+               '<select name="filter" >'+
+                    '<option value="filter" selected hidden disabled>Filters</option>'+
+                    '<option value="arts-museums">Arts & Museums</option>'+
+                    '<option value="city-tour">City Tour</option>'+
+                    '<option value="food-related">Food Related</option>'+
+                    '<option value="inside-programs">Inside Programs</option>'+
+                    '<option value="outside-programs">Outside Programs</option>'+
+                    '<option value="water-related">Water Related</option>'+
+                '</select>'
+            )
+
+            $('#featured ul').replaceWith(
+              '<select name="featured" class="pink-select">'+
+                   '<option value="featured" selected hidden disabled>Featured</option>'+
+                    '<option value="oslo">Oslo</option>'+
+                '</select>'
+            )
+        }
+    }
+
+    responsiveFilters()
+    $(window).resize(responsiveFilters)
+
+    if( $('.normalArrow').css('display')=='none'){
+        $('#featureButton').click(function(){
+            $(this).css('background-color','#949494');
+            $('#filterButton').css('background-color','#BDBDBD');
+            $('#filter div').replaceWith('<div><p>Oslo</p></div>');
+        })
+        $('#filterButton').click(function(){
+            $(this).css('background-color','#949494');
+            $('#featureButton').css('background-color','#BDBDBD');
+            $('#filter div').replaceWith(mobileFilterItems)
+        })
+    }
+    
+});
+</script>
+
 </body>
