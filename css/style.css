@@ -956,6 +956,9 @@ a {
     .brochure-viewer .mobileArrow {
         height:320px ;
     }
+    #mobileButtons div{
+        font-size: 24px;
+    }
 
     #filter div p{  /*got problem with @media: does not work at the right size*/
         font-size: 16px;
@@ -1000,6 +1003,11 @@ a {
         font-size: 16px;
         color:#ededed;
     }
+    #filter div p{
+        font-size: 12px;
+        margin-left: 1;
+        margin-right: 1px;
+   }
 
 }
 
