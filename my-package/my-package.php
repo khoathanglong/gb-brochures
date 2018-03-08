@@ -37,19 +37,20 @@
 <div class="container">
     <div class="row">
         <div class="col-12 brochure-container">
-            <h2 class="grey-heading">
-                Here you can find your<br>
-                <span>printable brochure</span>
-            </h2>
-            <p class="check-point"><span><i class="fas fa-check"></i></span> 6 hours package</p>
-            <p class="check-point"><span><i class="fas fa-check"></i></span> Discover Sweden</p>
-            <p class="check-point"><span><i class="fas fa-check"></i></span> 5 services</p>
+            <div class="printable-container">
+                <h2 class="grey-heading">
+                    Here you can find your<br>
+                    <span>printable brochure</span>
+                </h2>
+                <p class="check-point"><span><i class="fas fa-check"></i></span> 6 hours package</p>
+                <p class="check-point"><span><i class="fas fa-check"></i></span> Discover Sweden</p>
+                <p class="check-point"><span><i class="fas fa-check"></i></span> 5 services</p>
 
-            <div class="buttons left">
-                <a href="#" class="edge-btn-pink">Save it in PDF</a>
-                <a href="#" class="edge-btn-white">Send it to my email</a>
+                <div class="buttons left">
+                    <a href="#" class="edge-btn-pink">Save it in PDF</a>
+                    <a href="#" class="edge-btn-white">Send it to my email</a>
+                </div>
             </div>
-
             <img src="../img/mockups%2002.png" alt="brochure" id="my-brochure">
         </div>
     </div>
@@ -150,4 +151,6 @@
         <p class="copyright">&copy; Copyright statement</p>
     </div>
 </footer>
+
+<script type="text/javascript" src="../js/script.js"></script>
 </body>
