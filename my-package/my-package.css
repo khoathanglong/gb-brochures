@@ -1,21 +1,24 @@
 /* ---- Content ---- */
 .brochure-container {
     position: relative;
-    height: 500px;
+    height: calc(100vh - 65px);
     width: 70%;
     margin-left: 15%;
 }
 
 .grey-heading {
+    font-size: 24px;
     font-weight: 400;
     color: #555151;
-    margin-top: 200px;
+    margin-top: 235px;
     margin-bottom: 40px;
     text-transform: uppercase;
 }
 
 .grey-heading span {
     font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 26px;
 }
 
 .check-point {
@@ -30,9 +33,9 @@
 
 #my-brochure {
     position: absolute;
-    width: 500px;
-    top: 168px;
-    left: 50%;
+    width: 561px;
+    top: 233px;
+    left: 39%;
 }
 
 .buttons.left {
@@ -113,6 +116,7 @@
 
 .service-container {
     width: 900px;
+    margin: auto;
 }
 
 .basket {
@@ -254,13 +258,25 @@ footer {
 }
 
 /* --- Media Queries --- */
+@media (max-width: 1002px) {
+    #my-brochure {
+        width: 545px;
+        left: 40%;
+    }
+}
+
 @media (max-width: 925px) {
     .service-container {
         width: 100%;
     }
 
     #my-brochure {
+        left: 51%;
         width: 90%;
+    }
+
+    .brochure-container {
+        margin-left: 7%;
     }
 }
 
@@ -271,10 +287,6 @@ footer {
 
     .brochure-container {
         margin-left: 7%;
-    }
-
-    #my-brochure {
-        left: 51%;
     }
 }
 

@@ -68,7 +68,7 @@
             <p class="total-price"><span class="price-label">Price:</span> <span id="price">99€</span></p>
             <hr>
             <div class="buttons">
-                <a class="button-pink">Add more</a>
+                <a href="../6-hours-package/6hours.php" class="button-pink">Add more</a>
                 <a class="button-white">Checkout</a>
             </div>
         </div>
@@ -153,4 +153,5 @@
 </footer>
 
 <script type="text/javascript" src="../js/script.js"></script>
+<script type="text/javascript" src="my-package.js"></script>
 </body>
