@@ -464,19 +464,24 @@ a {
     margin-top: 40px;
     margin-bottom: 20px;
     display:flex;
-    justify-content: right;
+    justify-content: flex-end;
 }
 
 #filterForm  form {
     margin-right: 15px;
 }
-#filter select, #featured select {
+#filter  select, #featured  select {
     -webkit-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
     -moz-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
     box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
     text-align: center;
+    text-align: center;
+    text-align-last: center; /*for mozzila*/
 }
 
+#featured  option {
+    text-align: left;
+}
 #filter select {
       /*for firefox*/
     -moz-appearance: none;
@@ -490,11 +495,10 @@ a {
     background: url('../img/arrow.png') no-repeat right rgba(255,255,255,0.7);
     background-size: 20px 22px;
     background-position: 95% 50%;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 8px;
-    padding-right: 20px;
+    padding:5px 20px 5px 8px;
+    width: 170px;
 }
+
 
 .fine-hr {
     clear: both;

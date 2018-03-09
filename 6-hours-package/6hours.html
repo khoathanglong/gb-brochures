@@ -24,7 +24,7 @@
 </head>
 <body>
 <header>
-    <div>
+<div>
     <div class="menu">
         <div class="logo"><a href="#"><img src="../img/globuzzerLogo.png" alt="gb-logo"></a></div>
         <div id="mobilemenu" class="show-mobile"><span class="fa fa-bars"></span></div>
@@ -88,7 +88,7 @@
 <div class="container" id='filterForm'>
             <form id="filter" method="POST">
                 <select name="filter" >
-                    <option value="filter" selected>Filters</option>
+                    <option value="filter" selected hidden disabled>Filters</option>
                     <option value="arts-museums">Arts & Museums</option>
                     <option value="city-tour">City Tour</option>
                     <option value="food-related">Food Related</option>
@@ -101,7 +101,12 @@
             <form id="featured" method="POST">
                 <select name="featured" class="pink-select">
                     <option value="featured" selected hidden disabled>Featured</option>
-                    <option value="oslo">Oslo</option>
+                    <option value="most-view">Most Viewed</option>
+                    <option value="most-cheered">Most Cheered</option>
+                    <option value="most-chosen">Most Chosen</option>
+                    <option value="lowest-price">Lowest Price</option>
+                    <option value="highest-price">Highest Price</option>
+
                 </select>
             </form>
 </div>   
@@ -112,7 +117,7 @@
         <div class="services">
             <div class="thumbnail-container">
                 <div class="hover-container">
-                    <div class="thumbnail" style="background-image:url(../img/service1.jpg)"></div>
+                    <div class="thumbnail" style="background-image:url(../img/service1.png)"></div>
                     <div class="color-overlay"></div>
                     <div class="service-desc">
                         <h3>Bus Trip</h3>
@@ -125,7 +130,7 @@
             </div>
             <div class="thumbnail-container">
                 <div class="hover-container">
-                    <div class="thumbnail" style="background-image:url(../img/service2.jpg)"></div>
+                    <div class="thumbnail" style="background-image:url(../img/service2.png)"></div>
                     <div class="color-overlay"></div>
                     <div class="service-desc">
                         <h3>Boat Trip</h3>
@@ -138,7 +143,7 @@
             </div>
             <div class="thumbnail-container">
                 <div class="hover-container">
-                    <div class="thumbnail" style="background-image:url(../img/service3.jpg)"></div>
+                    <div class="thumbnail" style="background-image:url(../img/service3.png)"></div>
                     <div class="color-overlay"></div>
                     <div class="service-desc">
                         <h3>Surf Trip</h3>
@@ -168,7 +173,7 @@
         <div class=" services">
             <div class="thumbnail-container ">
                 <div class="hover-container ">
-                    <div class="thumbnail" style="background-image:url(../img/service5.jpg)"></div>
+                    <div class="thumbnail" style="background-image:url(../img/service5.png)"></div>
                     <div class="color-overlay"></div>
                     <div class="service-desc">
                         <h3>Museum Trip</h3>
@@ -181,7 +186,7 @@
             </div>
             <div class="thumbnail-container">
                 <div class="hover-container">
-                    <div class="thumbnail" style="background-image:url(../img/service6.jpg)"></div>
+                    <div class="thumbnail" style="background-image:url(../img/service6.png)"></div>
                     <div class="color-overlay"></div>
                     <div class="service-desc">
                         <h3>Forest Trip</h3>
@@ -194,7 +199,7 @@
             </div>
             <div class="thumbnail-container">
                 <div class="hover-container">
-                    <div class="thumbnail" style="background-image:url(../img/service7.jpg)"></div>
+                    <div class="thumbnail" style="background-image:url(../img/service7.png)"></div>
                     <div class="color-overlay"></div>
                     <div class="service-desc">
                         <h3>Dessert Trip</h3>
@@ -255,20 +260,40 @@ $(document).ready(function () {
                    //  '<li value="inside-programs">Inside Programs</li>'+
                    //  '<li value="outside-programs">Outside Programs</li>'+
                    // '<li value="water-related">Water Related</li>'+
+    var mobileFeatureItem =
+             '<div>'+
+                    '<p value="All" style="text-decoration:underline">All</p>'+
+                    '<p  value="most-view">Most Viewed</p>'+
+                    '<p value="most-cheered">Most Cheered</p>'+
+                    '<p value="most-chosen">Most Chosen</p>'+
+                '</div>'
+
     function responsiveFilters(){
         if( $('.normalArrow').css('display')=='none'){ //when the screen is small
             $('#supplementalDiv').show();
             $('#mobileButtons').show();
-            $('#filter select').replaceWith(mobileFilterItems)
+            $('#featured').hide()
+            $('#filter select').replaceWith(mobileFilterItems);
 
-            $('#featured select').replaceWith(
-               '<ul name="featured"  style="list-style-type:none;display:none">'+
-                    '<li value="oslo">Oslo</li>'+
-                '</ul>' 
-            )
+            // $('#featured div').replaceWith(
+            //    '<ul name="featured"  style="list-style-type:none;display:none">'+
+            //         '<li value="oslo">Oslo</li>'+
+            //     '</ul>' 
+            // );
+            $('#featureButton').click(function(){
+                $(this).css('background-color','#949494');
+                $('#filterButton').css('background-color','#BDBDBD');
+                $('#filter div').replaceWith(mobileFeatureItem);
+            });
+            $('#filterButton').click(function(){
+                $(this).css('background-color','#949494');
+                $('#featureButton').css('background-color','#BDBDBD');
+                $('#filter div').replaceWith(mobileFilterItems);
+            });
         }else{
             $('#supplementalDiv').hide();
             $('#mobileButtons').hide();
+            $('#featured').show()
             $('#filter div').replaceWith(
                '<select name="filter" >'+
                     '<option value="filter" selected hidden disabled>Filters</option>'+
@@ -279,32 +304,36 @@ $(document).ready(function () {
                     '<option value="outside-programs">Outside Programs</option>'+
                     '<option value="water-related">Water Related</option>'+
                 '</select>'
-            )
+            );
 
-            $('#featured ul').replaceWith(
+            $('#featured div').replaceWith(
               '<select name="featured" class="pink-select">'+
                    '<option value="featured" selected hidden disabled>Featured</option>'+
-                    '<option value="oslo">Oslo</option>'+
+                    '<option value="most-view">Most Viewed</option>'+
+                    '<option value="most-cheered">Most Cheered</option>'+
+                    '<option value="most-chosen">Most Chosen</option>'+
+                    '<option value="lowest-price">Lowest Price</option>'+
+                    '<option value="highest-price">Highest Price</option>'+
                 '</select>'
-            )
+            );
         }
     }
 
     responsiveFilters()
     $(window).resize(responsiveFilters)
 
-    if( $('.normalArrow').css('display')=='none'){
-        $('#featureButton').click(function(){
-            $(this).css('background-color','#949494');
-            $('#filterButton').css('background-color','#BDBDBD');
-            $('#filter div').replaceWith('<div><p>Oslo</p></div>');
-        })
-        $('#filterButton').click(function(){
-            $(this).css('background-color','#949494');
-            $('#featureButton').css('background-color','#BDBDBD');
-            $('#filter div').replaceWith(mobileFilterItems)
-        })
-    }
+    // if( $('.normalArrow').css('display')=='none'){
+    //     $('#featureButton').click(function(){
+    //         $(this).css('background-color','#949494');
+    //         $('#filterButton').css('background-color','#BDBDBD');
+    //         $('#filter div').replaceWith(mobileFeatureItem);
+    //     })
+    //     $('#filterButton').click(function(){
+    //         $(this).css('background-color','#949494');
+    //         $('#featureButton').css('background-color','#BDBDBD');
+    //         $('#filter div').replaceWith(mobileFilterItems)
+    //     })
+    // }
     
 });
 </script>
