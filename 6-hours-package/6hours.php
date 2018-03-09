@@ -248,6 +248,7 @@
     </div>
 </footer>
 
+<script type="text/javascript" src="../js/script.js"></script>
 <script>
     $(document).ready(function () {
         var mobileFilterItems= '<div>'+
@@ -314,7 +315,7 @@
                 );
             }
         }
-        responsiveFilters()
+        responsiveFilters();
         $(window).resize(responsiveFilters)
         // if( $('.normalArrow').css('display')=='none'){
         //     $('#featureButton').click(function(){
