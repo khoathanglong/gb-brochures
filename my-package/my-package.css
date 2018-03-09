@@ -341,4 +341,9 @@ footer {
         width: 85%;
         padding: 10px;
     }
+
+    .service-card {
+        width: 65%;
+        margin-left: 17.5%;
+    }
 }
