@@ -103,9 +103,9 @@ body {
 }
 
 .row::after {
-	content: "";
-	display: table;
-	clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .hidden-sm {
@@ -123,4 +123,11 @@ body {
   [class*='col-'] {
     width: 100%;
   }
+}
+
+/*add responsive image to bigger display*/
+.img-responsive{
+  width: 100%;
+  height: auto;
+  display: block;
 }
