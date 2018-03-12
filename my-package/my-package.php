@@ -77,7 +77,29 @@
             <h3>Aren't these the services you wanted?</h3>
             <p>Delete the ones you are not interested in or go back and add the ones you missed.</p>
             <hr class="shortHr">
-            <div class="service-card">
+
+            <?php
+            require '../include/connection.php';
+
+            $result = mysqli_query($conn, 'SELECT * FROM packages');
+            $resultCheck = mysqli_num_rows($result);
+
+            if($resultCheck > 0) {
+                while ($service = mysqli_fetch_assoc($result)) {
+                    ?>
+                    <div class="service-card">
+                        <div class="img" style="background-image: url('<?php echo $service['img']; ?>')"></div>
+                        <div class="service-card-desc">
+                            <h1><?php echo $service['name']; ?></h1>
+                            <p>Lorem ipsum dolor sit amet<br>
+                                Lorem ipsum dolor...</p>
+                            <hr>
+                            <a href="#" class="delete-btn">Delete</a>
+                        </div>
+                    </div>
+                <?php }
+            }?>
+            <!--div class="service-card">
                 <div class="img" style="background-image: url('../img/service1.png')"></div>
                 <div class="service-card-desc">
                     <h1>Transport</h1>
@@ -126,7 +148,7 @@
                     <hr>
                     <a href="#" class="delete-btn">Delete</a>
                 </div>
-            </div>
+            </div-->
         </div>
     </div>
 </div>
