@@ -16,12 +16,16 @@ $(document).ready(function () {
                 intro = 'Discover Sweden';
                 break;
             case 'oslo':
-                imgURL = 'img/raphael-andres-430356.png';
+                imgURL = 'img/Oslo.jpg';
                 intro = 'Discover Norway';
                 break;
-            case 'rome':
-                imgURL = 'img/raphael-andres-430356.png';
-                intro = 'Discover Italy';
+            case 'helsinki':
+                imgURL = 'img/Helsinki.jpg';
+                intro = 'Discover Finland';
+                break;
+            case 'copenhagen':
+                imgURL = 'img/Copenhagen2.jpg';
+                intro = 'Discover Denmark';
                 break;
             default:
                 break;
