@@ -78,13 +78,16 @@
             </div>
 
             <div class='col-6'>
-                <img class='img-responsive book-cover' id="book-cover" src="../img/BROCHURE 6 hours mockup.jpg" alt="BROCHURE">
+                <a href="#slideshow">
+                    <img class='img-responsive book-cover' id="book-cover" src="../img/BROCHURE 6 hours mockup.jpg" alt="BROCHURE">
+                </a>
+                
             </div>        
         </div>
         
     <!-- Brochure viewer slideshow  -->
        
-        <div class="row">
+        <div class="row" id='slideshow'>
              <div class="brochure slider0">
                 <img src="../img/service1.jpg" class="img-responsive">
                  <div class="nameTag">BUS TRIP</div>  
@@ -137,7 +140,7 @@
                 <div class="lastBrochure">
                     <h2>Thank you for choosing our services!</h2>
                     <div>
-                        <a href="" class="button-pink">See My Package</a>
+                        <a href="../my-package/my-package.php" class="button-pink">See My Package</a>
                         <a href="#services-block" class="button-pink">All Services</a>
                         <a href="#book-cover" class="button-pink go-back">Go Back</a>
                     </div>                        
@@ -221,7 +224,7 @@
     <hr class="fine-hr">
     <div class="row">
         <div class="services">
-            <div class="thumbnail-container col-4" >
+            <div class="thumbnail-container col-4 service1" >
                 <div class="hover-container">
                     <div class="thumbnail" style="background-image:url(../img/service1.png)"></div>
                     <div class="color-overlay"></div>
@@ -234,7 +237,7 @@
                 <img src="../img/icon3_check.png" alt="check" class="check">
                 <img src="../img/icon3_hearth.png" alt="heart" class="heart">
             </div>
-            <div class="thumbnail-container col-4">
+            <div class="thumbnail-container col-4 service2">
                 <div class="hover-container">
                     <div class="thumbnail" style="background-image:url(../img/service2.jpg)"></div>
                     <div class="color-overlay"></div>
@@ -247,7 +250,7 @@
                 <img src="../img/icon3_check.png" alt="check" class="check">
                 <img src="../img/icon3_hearth.png" alt="heart" class="heart">
             </div>
-            <div class="thumbnail-container col-4">
+            <div class="thumbnail-container col-4 service3">
                 <div class="hover-container">
                     <div class="thumbnail" style="background-image:url(../img/service3.jpg)"></div>
                     <div class="color-overlay"></div>
@@ -260,7 +263,7 @@
                 <img src="../img/icon3_check.png" alt="check" class="check">
                 <img src="../img/icon3_hearth.png" alt="heart" class="heart">
             </div>
-            <div class="thumbnail-container col-4">
+            <div class="thumbnail-container col-4 service4">
                 <div class="hover-container">
                     <div class="thumbnail" style="background-image:url(../img/service4.jpg)"></div>
                     <div class="color-overlay"></div>
@@ -277,7 +280,7 @@
     </div>
     <div class="row">
         <div class=" services">
-            <div class="thumbnail-container col-4">
+            <div class="thumbnail-container col-4 service5">
                 <div class="hover-container ">
                     <div class="thumbnail" style="background-image:url(../img/service5.jpg)"></div>
                     <div class="color-overlay"></div>
@@ -290,7 +293,7 @@
                 <img src="../img/icon3_check.png" alt="check" class="check">
                 <img src="../img/icon3_hearth.png" alt="heart" class="heart">
             </div>
-            <div class="thumbnail-container col-4">
+            <div class="thumbnail-container col-4 service6">
                 <div class="hover-container">
                     <div class="thumbnail" style="background-image:url(../img/service6.jpg)"></div>
                     <div class="color-overlay"></div>
@@ -303,7 +306,7 @@
                 <img src="../img/icon3_check.png" alt="check" class="check">
                 <img src="../img/icon3_hearth.png" alt="heart" class="heart">
             </div>
-            <div class="thumbnail-container col-4">
+            <div class="thumbnail-container col-4 service7">
                 <div class="hover-container" >
                     <div class="thumbnail" style="background-image:url(../img/service7.jpg)"></div>
                     <div class="color-overlay"></div>
@@ -316,7 +319,7 @@
                 <img src="../img/icon3_check.png" alt="check" class="check">
                 <img src="../img/icon3_hearth.png" alt="heart" class="heart">
             </div>
-            <div class="thumbnail-container col-4">
+            <div class="thumbnail-container col-4 service8">
                 <div class="hover-container" >
                     <div class="thumbnail" style="background-image:url(../img/service8.jpg)"></div>
                     <div class="color-overlay"></div>
@@ -469,6 +472,8 @@ $('.brochure-container .book-cover').click(function(){
 // go back the book cover
 $('.go-back').click(function(){
     $('.brochure-container .introduction').css('display','block');
+    $('.slider8').css('display', "none");
+    $('.heart-check, .footnote, .extend-resize').css('visibility','hidden')
 })
 
 // Create the slideshow
