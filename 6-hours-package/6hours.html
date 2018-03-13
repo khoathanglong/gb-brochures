@@ -26,11 +26,11 @@
 <header>
 <div>
     <div class="menu">
-        <div class="logo"><a href="#"><img src="../img/globuzzerLogo.png" alt="gb-logo"></a></div>
+        <div class="logo"><a href="../index.html"><img src="../img/globuzzerLogo.png" alt="gb-logo"></a></div>
         <div id="mobilemenu" class="show-mobile"><span class="fa fa-bars"></span></div>
         <ul id="mainmenu" class="nav-bar">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">My package</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../my-package/my-package.php">My package</a><span id="num-packages">5</span></li>
         </ul>
     </div>
     <div class="img-header package-view">
@@ -234,7 +234,7 @@
     <hr class="fine-hr">
     <div class="row">
         <div class="services">
-            <div class="thumbnail-container col-4 service1" >
+            <div id="service1" class="thumbnail-container col-4 service1" >
                 <div class="hover-container">
                     <div class="thumbnail" style="background-image:url(../img/service1.png)"></div>
                     <div class="color-overlay"></div>
@@ -247,7 +247,7 @@
                 <img src="../img/icon3_check.png" alt="check" class="check">
                 <img src="../img/icon3_hearth.png" alt="heart" class="heart">
             </div>
-            <div class="thumbnail-container col-4 service2">
+            <div id="service2"  class="thumbnail-container col-4 service2">
                 <div class="hover-container">
                     <div class="thumbnail" style="background-image:url(../img/service2.jpg)"></div>
                     <div class="color-overlay"></div>
@@ -260,7 +260,7 @@
                 <img src="../img/icon3_check.png" alt="check" class="check">
                 <img src="../img/icon3_hearth.png" alt="heart" class="heart">
             </div>
-            <div class="thumbnail-container col-4 service3">
+            <div  id="service3" class="thumbnail-container col-4 service3">
                 <div class="hover-container">
                     <div class="thumbnail" style="background-image:url(../img/service3.jpg)"></div>
                     <div class="color-overlay"></div>
@@ -273,7 +273,7 @@
                 <img src="../img/icon3_check.png" alt="check" class="check">
                 <img src="../img/icon3_hearth.png" alt="heart" class="heart">
             </div>
-            <div class="thumbnail-container col-4 service4">
+            <div  id="service4" class="thumbnail-container col-4 service4">
                 <div class="hover-container">
                     <div class="thumbnail" style="background-image:url(../img/service4.jpg)"></div>
                     <div class="color-overlay"></div>
@@ -290,7 +290,7 @@
     </div>
     <div class="row">
         <div class=" services">
-            <div class="thumbnail-container col-4 service5">
+            <div  id="service5" class="thumbnail-container col-4 service5">
                 <div class="hover-container ">
                     <div class="thumbnail" style="background-image:url(../img/service5.jpg)"></div>
                     <div class="color-overlay"></div>
@@ -303,7 +303,7 @@
                 <img src="../img/icon3_check.png" alt="check" class="check">
                 <img src="../img/icon3_hearth.png" alt="heart" class="heart">
             </div>
-            <div class="thumbnail-container col-4 service6">
+            <div  id="service6" class="thumbnail-container col-4 service6">
                 <div class="hover-container">
                     <div class="thumbnail" style="background-image:url(../img/service6.jpg)"></div>
                     <div class="color-overlay"></div>
@@ -316,7 +316,7 @@
                 <img src="../img/icon3_check.png" alt="check" class="check">
                 <img src="../img/icon3_hearth.png" alt="heart" class="heart">
             </div>
-            <div class="thumbnail-container col-4 service7">
+            <div  id="service7" class="thumbnail-container col-4 service7">
                 <div class="hover-container" >
                     <div class="thumbnail" style="background-image:url(../img/service7.jpg)"></div>
                     <div class="color-overlay"></div>
@@ -329,7 +329,7 @@
                 <img src="../img/icon3_check.png" alt="check" class="check">
                 <img src="../img/icon3_hearth.png" alt="heart" class="heart">
             </div>
-            <div class="thumbnail-container col-4 service8">
+            <div  id="service8" class="thumbnail-container col-4 service8">
                 <div class="hover-container" >
                     <div class="thumbnail" style="background-image:url(../img/service8.jpg)"></div>
                     <div class="color-overlay"></div>
@@ -367,6 +367,7 @@
     </div>
 </footer>
 
+<script type="text/javascript" src="../js/script.js"></script>
 <script>
 
 $(document).ready(function () {

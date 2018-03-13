@@ -94,6 +94,19 @@ a {
     opacity: 0.7;
 }
 
+#num-packages {
+    position: relative;
+    top: -15px;
+    line-height: 15px;
+    background-color: white;
+    color: #cf4848;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 3px;
+    padding: 2px;
+    margin: 2px;
+}
+
 .img-header {
     position: relative;
     margin-top: 80px;
@@ -405,7 +418,7 @@ a {
     background-image: url('../img/background pattern behind the brochure.png') ;
     height: auto;
 
-    font-size: calc(100%*1.);
+    font-size: calc(100%*1);
     position: relative;
     padding-top: 75px;
     padding-bottom: 75px;
@@ -1279,9 +1292,10 @@ a {
         font-size: 16px;
         color:#ededed;
     }
+
     #filter div p{
         font-size: 12px;
-        margin-left: 1;
+        margin-left: 1px;
         margin-right: 1px;
    }
 

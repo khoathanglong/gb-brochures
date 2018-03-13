@@ -29,7 +29,7 @@
         <div id="mobilemenu" class="show-mobile"><span class="fa fa-bars"></span></div>
         <ul id="mainmenu" class="nav-bar">
             <li><a href="../index.html">Home</a></li>
-            <li><a href="my-package.php">My package</a></li>
+            <li><a href="my-package.php">My package</a><span id="num-packages">5</span></li>
         </ul>
     </div>
 </header>
@@ -68,7 +68,7 @@
             <p class="total-price"><span class="price-label">Price:</span> <span id="price">99€</span></p>
             <hr>
             <div class="buttons">
-                <a href="../6-hours-package/6hours.php" class="button-pink">Add more</a>
+                <a href="../6-hours-package/6hours.html" class="button-pink">Add more</a>
                 <a class="button-white">Checkout</a>
             </div>
         </div>
@@ -78,27 +78,6 @@
             <p>Delete the ones you are not interested in or go back and add the ones you missed.</p>
             <hr class="shortHr">
 
-            <?php
-            require '../include/connection.php';
-
-            $result = mysqli_query($conn, 'SELECT * FROM packages');
-            $resultCheck = mysqli_num_rows($result);
-
-            if($resultCheck > 0) {
-                while ($service = mysqli_fetch_assoc($result)) {
-                    ?>
-                    <div class="service-card">
-                        <div class="img" style="background-image: url('<?php echo $service['img']; ?>')"></div>
-                        <div class="service-card-desc">
-                            <h1><?php echo $service['name']; ?></h1>
-                            <p>Lorem ipsum dolor sit amet<br>
-                                Lorem ipsum dolor...</p>
-                            <hr>
-                            <a href="#" class="delete-btn">Delete</a>
-                        </div>
-                    </div>
-                <?php }
-            }?>
             <!--div class="service-card">
                 <div class="img" style="background-image: url('../img/service1.png')"></div>
                 <div class="service-card-desc">
@@ -148,8 +127,8 @@
                     <hr>
                     <a href="#" class="delete-btn">Delete</a>
                 </div>
-            </div-->
-        </div>
+            </div>
+        </div-->
     </div>
 </div>
 
