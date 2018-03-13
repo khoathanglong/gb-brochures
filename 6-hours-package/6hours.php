@@ -29,8 +29,8 @@
             <div class="logo"><a href="#"><img src="../img/globuzzerLogo.png" alt="gb-logo"></a></div>
             <div id="mobilemenu" class="show-mobile"><span class="fa fa-bars"></span></div>
             <ul id="mainmenu" class="nav-bar">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">My package</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../my-package/my-package.php">My package</a></li>
             </ul>
         </div>
         <div class="img-header package-view">
