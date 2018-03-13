@@ -118,7 +118,7 @@ a {
     right: 0;
     text-align: center;
     z-index: 1;
-   
+
 }
 #header-moving-down a{
     color: inherit;
@@ -126,7 +126,6 @@ a {
 
 .img-header.package-view .svg-inline--fa:hover {
     cursor: pointer;
-    
 }
 
 .intro {
@@ -405,6 +404,7 @@ a {
     color: #fff;
     background-image: url('../img/background pattern behind the brochure.png') ;
     height: auto;
+
     font-size: calc(100%*1.);
     position: relative;
     padding-top: 75px;
@@ -437,6 +437,7 @@ a {
 .brochure-viewer .container{
     padding:100px 0;
 }
+
 
 .brochure-viewer .col-6>img{
     padding:100px 0;
@@ -650,7 +651,6 @@ a {
 
 .fine-hr {
     clear: both;
-    
     border:none;
     border-bottom: solid 2.5px rgb(207, 72, 72)
 
@@ -663,12 +663,12 @@ a {
 .services {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
-    
+    margin-top: 20px;  
 }
 
 .thumbnail-container {
  margin:calc(100%/50);
+
 }
 
 .thumbnail-container .heart, .thumbnail-container .check {
@@ -845,6 +845,7 @@ a {
         width: 250px;
     }
 }*/
+
 @media (max-width: 1196px){
     .brochure-viewer .welcome-text{
         top:100px;
@@ -856,6 +857,7 @@ a {
         font-size: 18px
     }
 }
+
 
 @media (max-width: 960px) {
     .contact .section-heading, .address, .mail-phone, .contact-btn {
@@ -885,6 +887,7 @@ a {
     }
 
     
+
     /* -- Brochure Viewer for Small Sceen-- */
 
     .brochure-viewer .welcome-text{
@@ -897,6 +900,7 @@ a {
         font-size: 108px;
     }
 
+
      .brochure-viewer .welcome-text p{
         font-size: 30px;
         color:#ededed;
@@ -905,7 +909,7 @@ a {
     .brochure-viewer .nameTag{
         font-size: 1em;
     }
-    
+
     .brochure-viewer .detailTour div h1 {
         font-size: 1.5em;
     }
@@ -918,7 +922,7 @@ a {
     }
     .brochure-viewer .arrow{
         text-align: center;
-        
+
     }
     .brochure-viewer .normalArrow {
         display: none;
@@ -928,17 +932,20 @@ a {
         display:initial;
         padding:100px 0;
     }
-    
+
     .services{
         flex-flow: row wrap;
     }
 
+
    .thumbnail-container {
+
         flex-basis: 33%; /*let a block takes up 33% of the flex row for responsive*/
         text-align: center;
     }
 
     .hover-container{   
+
         margin-right: auto;
         margin-left: auto;
         /*width: 200px;
@@ -949,9 +956,11 @@ a {
         height:80px;
         float:none;
         margin-top: 20px;
+
        text-shadow: 2px 2px rgba(0,0,0,1);
     }
    
+
     #mobileButtons {
         display:flex;
         justify-content: center;
@@ -961,7 +970,7 @@ a {
         border-bottom:solid 4px #AD4248 ;
         border-left: solid 2px #AD4248 ;
         border-right:solid 2px #AD4248 ;
-        
+
     }
     #mobileButtons div{
         cursor: pointer;
@@ -975,6 +984,7 @@ a {
         width: 100%;
         padding:15px 20px;
 
+
    }
    #filterButton{
       border-radius: 8px 0 0 8px;
@@ -985,6 +995,7 @@ a {
       background-color: #BDBDBD;
    }
     
+
     #filterForm{
         max-width: 100%;
         background-color: #C74746;
@@ -996,8 +1007,10 @@ a {
         cursor: pointer;
         width: 100%;
         margin:25px 0;
+
    }
    #filter div p{
+
         display: inline-block;
         font-size: 2em;
         font-weight: normal;
@@ -1009,15 +1022,18 @@ a {
         display: block;  
     } 
 
+
     #moving-down-icon a{
         color: inherit;
     }
     #header-moving-down{
         font-size: 4em;
+
 }
    
     
  
+
 }
 
 @media (max-width: 765px) {
@@ -1086,6 +1102,7 @@ a {
    }
 
    .brochure-viewer .detailTour div h1 {
+
         font-size: 1em;
     }
     .brochure-viewer .detailTour div p  {
@@ -1127,7 +1144,7 @@ a {
     .brochure-viewer .mobileArrow {
         height:400px ;
     }
-    
+
     .brochure-viewer .heart-check{
         font-size: 20px
     }
@@ -1160,6 +1177,7 @@ a {
 
 @media (max-width: 500px){
      .brochure .lastBrochure {
+
         top: 20%;
         left: 20%;
     }
@@ -1191,11 +1209,13 @@ a {
         margin-left: 20px;
     }
 
+
      .brochure-viewer .welcome-text h1{
         font-size: 80px;
     }
 
      .brochure-viewer .welcome-text p{
+
         font-size: 20px;
         color:#ededed;
     }
@@ -1205,6 +1225,7 @@ a {
     }
     .brochure-viewer .footnote .fa-circle{
          font-size: 80%;
+
     }
     .brochure-viewer .footnote .bigCircle{
         font-size: 150%;
@@ -1216,6 +1237,7 @@ a {
     #filter div p{  /*got problem with @media: does not work at the right size*/
         font-size: 16px;
    }
+
 }
 
 @media (max-width: 430px) {
@@ -1248,6 +1270,7 @@ a {
     .package {
         width: 70%;
     }
+
       .brochure-viewer .welcome-text h1{
         font-size: 60px;
     }
@@ -1261,6 +1284,7 @@ a {
         margin-left: 1;
         margin-right: 1px;
    }
+
     .brochure-viewer .detailTour div h1 {
         font-size: 0.7em;
     }
@@ -1279,6 +1303,7 @@ a {
         width: 80%;
         margin-left: 10%;
     }
+
      .brochure-viewer .nameTag{
         font-size: 6px;
     }
