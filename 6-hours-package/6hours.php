@@ -110,6 +110,7 @@
 
             <div class="brochure slider4">
                 <img src="../img/service5.jpg" class="img-responsive">
+                 <div class="color-overlay"></div>
                  <div class="nameTag">MUSEUM TOUR</div>
                     <!-- <div class="detailTour">
                     <div>
@@ -182,10 +183,8 @@
             </a>
             
         </div>
-
-</div>
+    </div>
     
-
 </div>
 <div id='supplementalDiv'></div>
 
