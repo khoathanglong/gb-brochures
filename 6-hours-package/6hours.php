@@ -287,7 +287,7 @@
                     <div class="service-desc">
                         <h3>Museum Trip</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
-                        <a class="button-pink"><img src="../img/icon3_book.jpg" alt="book"> Read more</a>
+                        <a class="button-pink"><img src="../img/icon3_book.png" alt="book"> Read more</a>
                     </div>
                 </div>
                 <img src="../img/icon3_check.png" alt="check" class="check">

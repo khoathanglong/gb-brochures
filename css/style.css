@@ -420,8 +420,8 @@ a {
 .brochure-viewer .normalArrow {
     position: absolute;
     width: 70%;
-    bottom:10px;
-    right:50px;
+    bottom:-80px;
+    right:60px;
 }
 .brochure-viewer .mobileArrow{
     display: none;
