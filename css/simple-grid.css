@@ -127,7 +127,10 @@ body {
 
 /*add responsive image to bigger display*/
 .img-responsive{
-  width: 100%;
-  height: auto;
-  display: block;
+    width: 100%;
+    height: auto;
+    display: block;
 }
+
+
+
