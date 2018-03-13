@@ -118,8 +118,10 @@ a {
     right: 0;
     text-align: center;
     z-index: 1;
-    
-    /*transition: 5s ease;*/
+   
+}
+#header-moving-down a{
+    color: inherit;
 }
 
 .img-header.package-view .svg-inline--fa:hover {
@@ -405,6 +407,7 @@ a {
     height: auto;
     width: 100%;
     font-size: calc(100%*1.);
+    position: relative;
 }
 
 .brochure-viewer .welcome-text{
@@ -458,6 +461,9 @@ a {
         margin-bottom: 40px;
 }   
     /* -- Brochure Viewer Detail-- */
+    .brochure-viewer .book-cover:hover{
+        cursor: pointer;
+    }
     .brochure-viewer .nameTag {
         position: absolute;
         top:30%;
@@ -467,6 +473,9 @@ a {
         font-weight: bold;
         padding:10px 10px 10px 40px;
     }
+        .nameTag:hover{
+            cursor: pointer;
+        }
     .brochure-viewer .detailTour{
         background-color: #ECECEC;
         position: absolute;
@@ -482,7 +491,7 @@ a {
     }
     .brochure-viewer .detailTour div h1 {
         color: #E75152;
-        font-size: 3em;
+        font-size: 2.5em;
     }
     .brochure-viewer .detailTour div p {
         color:#3D3D3D;
@@ -497,6 +506,7 @@ a {
       left:50%;
       font-size: 40px;
       color: white;
+      visibility: hidden;
       opacity: 0;
     }
      .brochure-viewer .heart-check:hover{
@@ -511,6 +521,7 @@ a {
         background-color: #252525;
         text-align: center;
         padding:20px 0;
+        visibility: hidden;
     }
     .brochure-viewer .footnote .fa-circle{
         padding:0 2px;
@@ -550,6 +561,21 @@ a {
         left: 2%;
         background-image: url(../img/service4.jpg);
     }
+    .extend-resize{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color:red;
+        cursor: pointer;
+        z-index: 2;
+        visibility: hidden;
+    }
+        .extend-resize .extend{
+            width: 1.5em;
+        }
+         .extend-resize .resize{
+            width: 1.5em;
+        }
     /*create image slide show*/
     .brochure{
         display: none;
@@ -559,9 +585,6 @@ a {
         position: absolute;
         top: 30%;
         left: 30%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
     }
     .brochure .lastBrochure div {
         margin:20px auto;
@@ -842,6 +865,7 @@ a {
 
     
     /* -- Brochure Viewer for Small Sceen-- */
+
     .brochure-viewer .welcome-text{
         position: relative;
         top:0;
@@ -857,6 +881,20 @@ a {
         color:#ededed;
     }
 
+    .brochure-viewer .nameTag{
+        font-size: 1em;
+    }
+    
+    .brochure-viewer .detailTour div h1 {
+        font-size: 1.5em;
+    }
+    .brochure-viewer .detailTour div p  {
+        font-size: 1em;
+    }
+    .brochure-viewer .detailTour div a{
+        font-size: 10px;
+        width: 5em;
+    }
     .brochure-viewer .arrow{
         text-align: center;
         
@@ -869,7 +907,7 @@ a {
         display:initial;
         padding:100px 0;
     }
-
+    
     .services{
         flex-flow: row wrap;
     }
@@ -947,10 +985,12 @@ a {
    }
     
     #moving-down-icon{
-        cursor: pointer;
-        display: block;
-        
+        display: block;  
     } 
+
+    #moving-down-icon a{
+        color: inherit;
+    }
     #header-moving-down{
         font-size: 4em;
 }
@@ -1023,6 +1063,30 @@ a {
     #filter div p{
         font-size: 24px;
    }
+
+   .brochure-viewer .detailTour div h1 {
+        font-size: 1em;
+    }
+    .brochure-viewer .detailTour div p  {
+        font-size: 0.5em;
+    }
+    .brochure-viewer .detailTour div a{
+        font-size: 0.5em;
+        width: 5em;
+        padding: 4px;
+    }
+
+    .brochure .lastBrochure {
+        top: 25%;
+        left: 25%;
+    }
+    .brochure .lastBrochure div {
+        margin:20px auto;
+    }
+    .brochure .lastBrochure a {
+        width:8em;
+        font-size: 10px;
+    }
 }
 
 
@@ -1042,10 +1106,39 @@ a {
     .brochure-viewer .mobileArrow {
         height:400px ;
     }
-   
+    
+    .brochure-viewer .heart-check{
+        font-size: 20px
+    }
+    .nextPage, .prevPage{
+        width: 20px;
+        border-radius: 50%;
+    }
+    .nextPage a, .prevPage a{
+        font-size: 16px;
+        vertical-align: middle;
+    }
+
+    .brochure .lastBrochure {
+        top: 25%;
+        left: 25%;
+    }
+    .brochure .lastBrochure h2 {
+        font-size: 1em;
+    }
+    .brochure .lastBrochure a {
+        width:8em;
+        padding:4px;
+        font-size: 6px;
+    }
 }
 
-
+@media (max-width: 500px){
+     .brochure .lastBrochure {
+        top: 20%;
+        left: 20%;
+    }
+}
 
 @media (max-width: 555px) {
     .contact .section-heading, .address, .mail-phone, .contact-btn {
@@ -1084,6 +1177,12 @@ a {
 
     .brochure-viewer .mobileArrow {
         height:320px ;
+    }
+    .brochure-viewer .footnote .fa-circle{
+         font-size: 80%;
+    }
+    .brochure-viewer .footnote .bigCircle{
+        font-size: 150%;
     }
     #mobileButtons div{
         font-size: 24px;
@@ -1137,7 +1236,17 @@ a {
         margin-left: 1;
         margin-right: 1px;
    }
-
+    .brochure-viewer .detailTour div h1 {
+        font-size: 0.7em;
+    }
+    .brochure-viewer .detailTour div p  {
+        font-size: 0.3em;
+    }
+    .brochure-viewer .detailTour div a{
+        font-size: 0.2em;
+        width: 5em;
+        padding: 2px;
+    }
 }
 
 @media (max-width: 378px) {
@@ -1145,6 +1254,30 @@ a {
         width: 80%;
         margin-left: 10%;
     }
-
+     .brochure-viewer .nameTag{
+        font-size: 6px;
+    }
+    .brochure .lastBrochure {
+        top: 30%;
+        left: 30%;
+    }
+    .brochure .lastBrochure h2 {
+        font-size: 0.5em;
+    }
+    .brochure .lastBrochure a {
+        margin:5px auto;
+        width:7.5em;
+        padding:2px;
+        font-size: 4px;
+    }
+    #moving-down-icon p{
+        font-size: 0.5em;
+    }
    
+}
+
+@media (max-width: 304px) {
+     #filter div p{
+        font-size: 10px;
+   }
 }

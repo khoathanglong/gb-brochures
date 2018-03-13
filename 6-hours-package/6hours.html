@@ -41,7 +41,10 @@
             </h2>
         </div>
         <div id='header-moving-down'>
-            <i  class="fas fa-chevron-circle-down"></i>
+            <a href="#book-cover">
+                <i  class="fas fa-chevron-circle-down"></i>
+            </a>
+            
         </div>
     </div>
     <div class="white-box"></div>
@@ -49,11 +52,15 @@
 </header>
 
 <div class="brochure-viewer">
-    <div class="container">
+     <div class="extend-resize">
+                <img src="../img/resize.png" alt="" class="resize">
+                <img src="../img/extend.png" alt="" class="extend">
+        </div>
+    <div class="container brochure-container">
         
       <!--   cover book -->
 
-        <!-- <div class="row">
+        <div class="row introduction">
             <div class='col-6 welcome-text'>
                 <div>
                     <h1>Welcome!</h1>
@@ -71,16 +78,16 @@
             </div>
 
             <div class='col-6'>
-                <img class='img-responsive' src="../img/BROCHURE 6 hours mockup.jpg" alt="BROCHURE">
+                <img class='img-responsive book-cover' id="book-cover" src="../img/BROCHURE 6 hours mockup.jpg" alt="BROCHURE">
             </div>        
-        </div> -->
+        </div>
         
-    <!--     3 Small 1 & 2 -->
+    <!-- Brochure viewer slideshow  -->
+       
         <div class="row">
              <div class="brochure slider0">
                 <img src="../img/service1.jpg" class="img-responsive">
-                 <div class="nameTag">BUS TRIP</div>
-                
+                 <div class="nameTag">BUS TRIP</div>  
             </div>
              <div class="brochure slider1">
                 <img src="../img/service2.jpg" class="img-responsive">
@@ -101,13 +108,13 @@
             <div class="brochure slider4">
                 <img src="../img/service5.jpg" class="img-responsive">
                  <div class="nameTag">MUSEUM TOUR</div>
-                <!--  <div class="detailTour">
-                <div>
-                    <h1>MUSEUM TOUR</h1>
-                    <p>some text some text some text some textsome text some text some text</p>
-                    <a href="#" class='button-pink'>Read more</a>
-                </div>
-                 </div> -->
+                    <!-- <div class="detailTour">
+                    <div>
+                        <h1>MUSEUM TOUR</h1>
+                        <p>some text some text some text some textsome text some text some text</p>
+                        <a href="#" class='button-pink'>Read more</a>
+                    </div> -->
+                 <!-- </div> -->
             </div>
 
             <div class="brochure slider5">
@@ -131,13 +138,12 @@
                     <h2>Thank you for choosing our services!</h2>
                     <div>
                         <a href="" class="button-pink">See My Package</a>
-                        <a href="" class="button-pink">All Services</a>
-                        <a href="" class="button-pink">Go Back</a>
+                        <a href="#services-block" class="button-pink">All Services</a>
+                        <a href="#book-cover" class="button-pink go-back">Go Back</a>
                     </div>                        
                 </div>
 
             </div>
-            
             <div class="nextPage">
                 <a class="next">&#10095;</a>
             </div>
@@ -168,9 +174,13 @@
             </div>
         <div id="moving-down-icon">
             <p>Or jump to see all the services</p>
-            <i  class="fas fa-chevron-circle-down"></i>
+            <a href="#services-block">
+                <i  class="fas fa-chevron-circle-down"></i>
+            </a>
+            
         </div>
-    </div>
+
+</div>
     
 
 </div>
@@ -367,7 +377,7 @@ $(document).ready(function () {
 
 
     function responsiveFilters(){
-        if( $('.normalArrow').css('display')=='none'){ //when the screen is small
+        if( $('#header-moving-down').css('font-size')=='64px'){ //when the screen is small
             $('#supplementalDiv').show();
             $('#mobileButtons').show();
             $('#featured').hide()
@@ -450,8 +460,20 @@ $(document).ready(function () {
 $(".nextPage").click(function(){plusSlides(1)});
 $(".prevPage").click(function(){plusSlides(-1)});
 
+// flip the cover
+$('.brochure-container .book-cover').click(function(){
+    $('.slider4').css('display', "block");
+    $('.brochure-container .introduction').css('display','none');
+    $('.heart-check, .footnote, .extend-resize').css('visibility','visible')
+  })
+// go back the book cover
+$('.go-back').click(function(){
+    $('.brochure-container .introduction').css('display','block');
+})
 
-var slideIndex = 9;
+// Create the slideshow
+
+var slideIndex = 5;
 showSlides(slideIndex);
 
 // Next/previous controls
@@ -473,12 +495,35 @@ function showSlides(n) {
         $('.dot'+i).removeClass('bigCircle')
   };
 
-  $('.slider'+(slideIndex-1)).css('display', "block");
-  $('.dot'+(slideIndex-1)).addClass('bigCircle')
+  if( $('.brochure-container .introduction').css('display')=='none'){
+    $('.slider'+(slideIndex-1)).css('display', "block");
+  }
+
+  
+
+
+  $('.dot'+(slideIndex-1)).addClass('bigCircle');
 
   $('.nextPage').css('background-image','url(../img/service'+(slideIndex+1)+'.jpg)')
   $('.prevPage').css('background-image','url(../img/service'+(slideIndex-1)+'.jpg)')
 } 
+
+//resize the brochure
+$('.extend').click(function(){
+    $('.brochure-container').removeClass('container')
+});
+$('.resize').click(function(){
+    $('.brochure-container').addClass('container');
+
+})
+
+//display detail tour
+$('.slider4 .nameTag').click(function(){
+    $('.slider4').append('<div class="detailTour"><div><h1>MUSEUM TOUR</h1>'+
+                        '<p>some text some text some text some textsome text some text some text</p>'+
+                        '<a href="#" class="button-pink">Read more</a></div>')
+    $(this).html('')
+})
 
 });
 </script>
