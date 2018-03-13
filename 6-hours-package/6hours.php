@@ -54,7 +54,9 @@
 <div class="brochure-viewer">
      <div class="extend-resize">
                 <img src="../img/resize.png" alt="" class="resize">
-                <img src="../img/extend.png" alt="" class="extend">
+                <a href="#services-block">
+                    <img src="../img/extend.png" alt="" class="extend">
+                </a><!-- this should be called jumping down -->
         </div>
     <div class="container brochure-container">
         
@@ -480,7 +482,7 @@ $('.go-back').click(function(){
 var slideIndex = 5;
 showSlides(slideIndex);
 
-// Next/previous controls
+    // Next/previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
@@ -503,9 +505,6 @@ function showSlides(n) {
     $('.slider'+(slideIndex-1)).css('display', "block");
   }
 
-  
-
-
   $('.dot'+(slideIndex-1)).addClass('bigCircle');
 
   $('.nextPage').css('background-image','url(../img/service'+(slideIndex+1)+'.jpg)')
@@ -513,13 +512,16 @@ function showSlides(n) {
 } 
 
 //resize the brochure
-$('.extend').click(function(){
-    $('.brochure-container').removeClass('container')
-});
-$('.resize').click(function(){
-    $('.brochure-container').addClass('container');
 
-})
+$('.resize').click(function(){
+    if($('.brochure-container').hasClass('container')){
+        $('.brochure-container').removeClass('container');
+        $('.brochure-viewer').css('padding','0');             
+    }else{
+        $('.brochure-container').addClass('container');
+        $('.brochure-viewer').css('padding','75px 0');
+    }
+});
 
 //display detail tour
 $('.slider4 .nameTag').click(function(){
