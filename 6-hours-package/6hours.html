@@ -206,7 +206,7 @@
 
 <div class="container" id='filterForm'>
             <form id="filter" method="POST">
-                <select name="filter" >
+                <select id="filter-services" name="filter" >
                     <option value="filter" selected hidden disabled>Filters</option>
                     <option value="arts-museums">Arts & Museums</option>
                     <option value="city-tour">City Tour</option>
@@ -225,7 +225,6 @@
                     <option value="most-chosen">Most Chosen</option>
                     <option value="lowest-price">Lowest Price</option>
                     <option value="highest-price">Highest Price</option>
-
                 </select>
             </form>
 </div>   
@@ -234,7 +233,7 @@
     <hr class="fine-hr">
     <div class="row">
         <div class="services">
-            <div id="service1" class="thumbnail-container col-4 service1" >
+            <div id="service1" class="thumbnail-container col-4 service1 city-tour outside-programs" >
                 <div class="hover-container">
                     <div class="thumbnail" style="background-image:url(../img/service1.png)"></div>
                     <div class="color-overlay"></div>
@@ -247,7 +246,7 @@
                 <img src="../img/icon3_check.png" alt="check" class="check">
                 <img src="../img/icon3_hearth.png" alt="heart" class="heart">
             </div>
-            <div id="service2"  class="thumbnail-container col-4 service2">
+            <div id="service2"  class="thumbnail-container col-4 service2 outside-programs water-related">
                 <div class="hover-container">
                     <div class="thumbnail" style="background-image:url(../img/service2.jpg)"></div>
                     <div class="color-overlay"></div>
@@ -260,7 +259,7 @@
                 <img src="../img/icon3_check.png" alt="check" class="check">
                 <img src="../img/icon3_hearth.png" alt="heart" class="heart">
             </div>
-            <div  id="service3" class="thumbnail-container col-4 service3">
+            <div  id="service3" class="thumbnail-container col-4 service3 outside-programs water-related">
                 <div class="hover-container">
                     <div class="thumbnail" style="background-image:url(../img/service3.jpg)"></div>
                     <div class="color-overlay"></div>
@@ -273,7 +272,7 @@
                 <img src="../img/icon3_check.png" alt="check" class="check">
                 <img src="../img/icon3_hearth.png" alt="heart" class="heart">
             </div>
-            <div  id="service4" class="thumbnail-container col-4 service4">
+            <div  id="service4" class="thumbnail-container col-4 service4 arts-museums outside-programs">
                 <div class="hover-container">
                     <div class="thumbnail" style="background-image:url(../img/service4.jpg)"></div>
                     <div class="color-overlay"></div>
@@ -290,7 +289,7 @@
     </div>
     <div class="row">
         <div class=" services">
-            <div  id="service5" class="thumbnail-container col-4 service5">
+            <div  id="service5" class="thumbnail-container col-4 service5 arts-museums inside-programs">
                 <div class="hover-container ">
                     <div class="thumbnail" style="background-image:url(../img/service5.jpg)"></div>
                     <div class="color-overlay"></div>
@@ -303,12 +302,12 @@
                 <img src="../img/icon3_check.png" alt="check" class="check">
                 <img src="../img/icon3_hearth.png" alt="heart" class="heart">
             </div>
-            <div  id="service6" class="thumbnail-container col-4 service6">
+            <div  id="service6" class="thumbnail-container col-4 service6 outside-programs">
                 <div class="hover-container">
                     <div class="thumbnail" style="background-image:url(../img/service6.jpg)"></div>
                     <div class="color-overlay"></div>
                     <div class="service-desc">
-                        <h3>Forest Trip</h3>
+                        <h3>Nature</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
                         <a class="button-pink"><img src="../img/icon3_book.png" alt="book"> Read more</a>
                     </div>
@@ -316,12 +315,12 @@
                 <img src="../img/icon3_check.png" alt="check" class="check">
                 <img src="../img/icon3_hearth.png" alt="heart" class="heart">
             </div>
-            <div  id="service7" class="thumbnail-container col-4 service7">
+            <div  id="service7" class="thumbnail-container col-4 service7 food-related inside-programs">
                 <div class="hover-container" >
                     <div class="thumbnail" style="background-image:url(../img/service7.jpg)"></div>
                     <div class="color-overlay"></div>
                     <div class="service-desc">
-                        <h3>Dessert Trip</h3>
+                        <h3>Local Food Tour</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
                         <a class="button-pink"><img src="../img/icon3_book.png" alt="book"> Read more</a>
                     </div>
@@ -329,7 +328,7 @@
                 <img src="../img/icon3_check.png" alt="check" class="check">
                 <img src="../img/icon3_hearth.png" alt="heart" class="heart">
             </div>
-            <div  id="service8" class="thumbnail-container col-4 service8">
+            <div  id="service8" class="thumbnail-container col-4 service8 outside-programs">
                 <div class="hover-container" >
                     <div class="thumbnail" style="background-image:url(../img/service8.jpg)"></div>
                     <div class="color-overlay"></div>
@@ -368,10 +367,11 @@
 </footer>
 
 <script type="text/javascript" src="../js/script.js"></script>
+<script type="text/javascript" src="filter.js"></script>
 <script>
 
 $(document).ready(function () {
-    var mobileFilterItems= '<div>'+
+    var mobileFilterItems= '<div id="filter-services">'+
                     '<p value="All" style="text-decoration:underline">All</p>'+
                     '<p value="arts-museums">Arts & Museums</p>'+
                     '<p value="city-tour">City Tour</p>'+
@@ -386,7 +386,7 @@ $(document).ready(function () {
                     '<p  value="most-view">Most Viewed</p>'+
                     '<p value="most-cheered">Most Cheered</p>'+
                     '<p value="most-chosen">Most Chosen</p>'+
-                '</div>'
+                '</div>';
 
 
 
@@ -394,7 +394,7 @@ $(document).ready(function () {
         if( $('#header-moving-down').css('font-size')=='64px'){ //when the screen is small
             $('#supplementalDiv').show();
             $('#mobileButtons').show();
-            $('#featured').hide()
+            $('#featured').hide();
             $('#filter select').replaceWith(mobileFilterItems);
 
             // $('#featured div').replaceWith(
@@ -415,9 +415,9 @@ $(document).ready(function () {
         }else{
             $('#supplementalDiv').hide();
             $('#mobileButtons').hide();
-            $('#featured').show()
+            $('#featured').show();
             $('#filter div').replaceWith(
-               '<select name="filter" >'+
+               '<select id="filter-services" name="filter" >'+
                     '<option value="filter" selected hidden disabled>Filters</option>'+
                     '<option value="arts-museums">Arts & Museums</option>'+
                     '<option value="city-tour">City Tour</option>'+

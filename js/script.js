@@ -1,6 +1,3 @@
-var numServices = 0;
-//localStorage.setItem('numServices', numServices);
-
 $(document).ready(function () {
     //toggle mobile menu
     $('#mobilemenu').click(function() {
