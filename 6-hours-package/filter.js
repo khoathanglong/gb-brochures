@@ -30,9 +30,24 @@ $(document).ready(function () {
            case 'water-related':
                showWaterRelated();
                break;
+           case 'all':
+               showAll();
+               break;
        }
    }) ;
 });
+
+/**
+ * Shows all services.
+ */
+function showAll() {
+    $artsMuseums.show();
+    $cityTour.show();
+    $foodRelated.show();
+    $insidePrograms.show();
+    $outsidePrograms.show();
+    $waterRelated.show();
+}
 
 /**
  * Shows only water related services.

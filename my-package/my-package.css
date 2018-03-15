@@ -10,7 +10,7 @@
     font-size: 24px;
     font-weight: 400;
     color: #555151;
-    margin-top: 235px;
+    margin-top: 37vh;
     margin-bottom: 40px;
     text-transform: uppercase;
 }
@@ -34,7 +34,7 @@
 #my-brochure {
     position: absolute;
     width: 561px;
-    top: 233px;
+    top: 37vh;
     left: 39%;
 }
 
