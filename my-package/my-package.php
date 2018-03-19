@@ -12,6 +12,9 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:900" rel="stylesheet">
     <!-- Simple grid -->
     <link rel="stylesheet" href="../css/simple-grid.css">
+    <!-- jQuery -->
+    <link rel="stylesheet" href="../css/jquery-ui.theme.min.css">
+    <link rel="stylesheet" href="../css/jquery-ui.min.css">
     <!-- Own stylesheets -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="my-package.css">
@@ -19,8 +22,11 @@
     <!------ SCRIPTS ------->
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
     <!-- Font Awesome -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <!-- jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
 </head>
 <body>
 <header>
@@ -33,6 +39,13 @@
         </ul>
     </div>
 </header>
+
+<div id="dialog-confirm" title="Send it to my mail">
+    <form method="post">
+        <label for="mail">Please enter your eMail here:</label>
+        <input type="email" name="mail" placeholder="example@globuzzer.com" class="text ui-widget-content ui-corner-all">
+    </form>
+</div>
 
 <div class="container">
     <div class="row">
@@ -47,8 +60,8 @@
                 <p class="check-point"><span><i class="fas fa-check"></i></span> 5 services</p>
 
                 <div class="buttons left">
-                    <a href="#" class="edge-btn-pink">Save it in PDF</a>
-                    <a href="#" class="edge-btn-white">Send it to my email</a>
+                    <a href="#" class="edge-btn-pink" id="pdf-btn">Save it in PDF</a>
+                    <a href="#" class="edge-btn-white" id="email-btn">Send it to my email</a>
                 </div>
             </div>
             <img src="../img/mockups%2002.png" alt="brochure" id="my-brochure">
@@ -154,5 +167,6 @@
 </footer>
 
 <script type="text/javascript" src="../js/script.js"></script>
+    <script type="text/javascript" src="package.js"></script>
 <script type="text/javascript" src="my-package.js"></script>
 </body>

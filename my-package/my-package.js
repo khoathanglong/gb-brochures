@@ -1,8 +1,10 @@
-$(document).ready(function() {
+var pdf = new jsPDF("1", "mm", "a4");
+
+$(document).ready(function () {
     // arrow to scroll down
-    $(".arrow-container p").click(function() {
+    $(".arrow-container p").click(function () {
         $('html, body').animate({
-            scrollTop: $(".chosen-services").offset().top-100
+            scrollTop: $(".chosen-services").offset().top - 100
         }, 500);
     });
 
@@ -17,82 +19,98 @@ $(document).ready(function() {
     }
 
     // Delete Service
-    $(".delete-btn").click(function(e) {
+    $(".delete-btn").click(function (e) {
         e.preventDefault();
         deletePackage($(this).parent().parent().attr('id'));
-    })
+    });
+
+    // Email dialog
+    var dialog = $("#dialog-confirm").dialog({
+        autoOpen: false,
+        resizable: false,
+        draggable: false,
+        height: "auto",
+        width: 400,
+        modal: true,
+        show: {
+            effect: "drop", duration: 300
+        },
+        hide: {
+            effect: "drop", duration: 300
+        },
+        buttons: {
+            "Send": function () {
+                $(this).dialog("close");
+            },
+            Cancel: function () {
+                $(this).dialog("close");
+            }
+        }
+    });
+
+    // Open email modal
+    $("#email-btn").click(function(e) {
+        e.preventDefault();
+        dialog.dialog("open");
+    });
+
+    // Downloads pdf
+    $("#pdf-btn").click(function(e) {
+       e.preventDefault();
+       pdf.save('My-package.pdf');
+    });
 });
 
 // Deletes html and removes package from local storage
 function deletePackage(id) {
     localStorage.removeItem(id);
-    $("#"+id).remove();
-    localStorage.clickcount = Number(localStorage.clickcount)-1;
+    $("#" + id).remove();
+    localStorage.clickcount = Number(localStorage.clickcount) - 1;
     $("#num-packages").html(localStorage.clickcount);
     $("#amount").html(localStorage.clickcount);
 }
 
 // Fetches chosen packages from local storage
 function getChosenPackages() {
-    for(var i = 0; i < localStorage.length; i++) {
+    for (var i = 0; i < localStorage.length; i++) {
         var key = localStorage.key(i);
-        if(key !== 'clickcount') {
-            showPackage(localStorage.getItem(localStorage.key(i)));
+        if (key !== 'clickcount') {
+            var item = localStorage.getItem(localStorage.key(i));
+            showPackage(item);
+            addToPdf(item);
         }
     }
 }
 
+// Adds the chosen services to the pdf to download.
+function addToPdf(item) {
+    var currService = getService(item);
+    pdf.addImage(currService.getImgData(), 'JPEG', 10, 10, 180, 130);
+    pdf.addPage();
+}
+
+// Goes through the service array and fetches the current service.
+function getService(service) {
+    for(var i = 0; i < window.services.length; i++)
+        if(window.services[i].id === service) return services[i];
+}
+
 // shows the chosen packages
 function showPackage(item) {
-    var imageURL = '';
-    var name = '';
+    var currObj = getService(item);
+    var imageURL = currObj.getImgURL();
+    var name = currObj.getName();
 
-    switch(item) {
-        case 'service1':
-            imageURL = '../img/service1.jpg';
-            name = 'Transport';
-            id = 'service1';
-            break;
-        case 'service2':
-            imageURL = '../img/service2.jpg';
-            name = 'Boat Trip';
-            break;
-        case 'service3':
-            imageURL = '../img/service3.jpg';
-            name = 'Surf Trip';
-            break;
-        case 'service4':
-            imageURL = '../img/service4.jpg';
-            name = 'Cabin Trip';
-            break;
-        case 'service5':
-            imageURL = '../img/service5.jpg';
-            name = 'Museum Tour';
-            break;
-        case 'service6':
-            imageURL = '../img/service6.jpg';
-            name = 'Nature';
-            break;
-        case 'service7':
-            imageURL = '../img/service7.jpg';
-            name = 'Local food tour';
-            break;
-        case 'service8':
-            imageURL = '../img/service8.jpg';
-            name = 'Fun park trip';
-            break;
-    }
-
-    var html = '<div id="'+ item + '" class=\"service-card\">' +
+    var html = '<div id="' + item + '" class=\"service-card\">' +
         '                <div class=\"img\" style=\"background-image: url(' + imageURL + ')"></div>' +
         '                <div class=\"service-card-desc\">' +
-        '                    <h1>'+ name + '</h1>' +
-    '                    <p>Lorem ipsum dolor sit amet<br>' +
-    '                        Lorem ipsum dolor...</p>' +
-    '                    <hr>' +
-    '                    <a href=\"#\" class=\"delete-btn\">Delete</a>' +
-    '                </div>' +
-    '            </div>';
+        '                    <h1>' + name + '</h1>' +
+        '                    <p>Lorem ipsum dolor sit amet<br>' +
+        '                        Lorem ipsum dolor...</p>' +
+        '                    <hr>' +
+        '                    <a href=\"#\" class=\"delete-btn\">Delete</a>' +
+        '                </div>' +
+        '            </div>';
 
     $(".chosen-services").append(html);
 }

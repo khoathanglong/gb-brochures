@@ -1,3 +1,44 @@
+/* ---- Customize jQuery-dialog ---- */
+.ui-dialog .ui-dialog-titlebar {
+    background-color: #e75152;
+    background-image: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.ui-dialog {
+    padding: 0;
+}
+
+.ui-widget input {
+    font-size: 15px;
+    padding: 10px;
+    margin-top: 5px;
+    width: 95%;
+}
+
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+    display: flex;
+    justify-content: center;
+    float: none;
+}
+
+.ui-dialog .ui-dialog-buttonpane button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #fff;
+    background-image: none;
+    background-color: #e75152;
+    padding: 10px 30px;
+}
+
+.ui-widget-content label {
+    font-family: 'Roboto', sans-serif;
+    color: #555151;
+    font-size: 15px;
+}
+
 /* ---- Content ---- */
 .brochure-container {
     position: relative;
