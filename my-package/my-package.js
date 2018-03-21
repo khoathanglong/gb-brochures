@@ -1,4 +1,4 @@
-var pdf = new jsPDF("1", "mm", "a4");
+var pdf = '';
 
 $(document).ready(function () {
     // arrow to scroll down
@@ -49,17 +49,37 @@ $(document).ready(function () {
     });
 
     // Open email modal
-    $("#email-btn").click(function(e) {
+    $("#email-btn").click(function (e) {
         e.preventDefault();
         dialog.dialog("open");
     });
 
     // Downloads pdf
-    $("#pdf-btn").click(function(e) {
-       e.preventDefault();
-       pdf.save('My-package.pdf');
+    $("#pdf-btn").click(function (e) {
+        e.preventDefault();
+
+        pdf = new jsPDF("1", "pt");
+        pdf.deletePage(1);
+
+        for (var i = 0; i < localStorage.length; i++) {
+            var key = localStorage.key(i);
+            if (key !== 'clickcount') {
+                var item = localStorage.getItem(localStorage.key(i));
+                addToPdf(item);
+            }
+        }
+        pdf.save('My-package.pdf');
     });
 });
+
+// Adds the chosen services to the pdf to download.
+function addToPdf(item) {
+    pdf.addPage(239.75, 582.25);
+    var currService = getService(item);
+    var width = pdf.internal.pageSize.width;
+    var height = pdf.internal.pageSize.height;
+    pdf.addImage(currService.getImgData(), 'JPEG', 0, 0, width, height);
+}
 
 // Deletes html and removes package from local storage
 function deletePackage(id) {
@@ -75,24 +95,15 @@ function getChosenPackages() {
     for (var i = 0; i < localStorage.length; i++) {
         var key = localStorage.key(i);
         if (key !== 'clickcount') {
-            var item = localStorage.getItem(localStorage.key(i));
-            showPackage(item);
-            addToPdf(item);
+            showPackage(localStorage.getItem(localStorage.key(i)));
         }
     }
 }
 
-// Adds the chosen services to the pdf to download.
-function addToPdf(item) {
-    var currService = getService(item);
-    pdf.addImage(currService.getImgData(), 'JPEG', 10, 10, 180, 130);
-    pdf.addPage();
-}
-
 // Goes through the service array and fetches the current service.
 function getService(service) {
-    for(var i = 0; i < window.services.length; i++)
-        if(window.services[i].id === service) return services[i];
+    for (var i = 0; i < window.services.length; i++)
+        if (window.services[i].id === service) return services[i];
 }
 
 // shows the chosen packages

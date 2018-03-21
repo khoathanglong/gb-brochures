@@ -1,3 +1,59 @@
+/* ---- CSS Brochure ----- */
+.slice {
+    position: absolute;
+    float: left;
+    width: 112px;
+    height: 272px;
+    background-size: cover;
+}
+
+.s1 {
+    height: 250px;
+    -webkit-box-shadow: inset -60px 1px 235px 0px rgba(0,0,0,0.23);
+    -moz-box-shadow: inset -60px 1px 235px 0px rgba(0,0,0,0.23);
+    box-shadow: inset -60px 1px 235px 0px rgba(0,0,0,0.23);
+}
+
+.s2 {
+    left: 74px;
+    top: -10px;
+    transform: perspective(600px) rotateY(-69deg);
+    -webkit-box-shadow: inset -65px 3px 235px -37px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset -65px 3px 235px -37px rgba(0,0,0,0.75);
+    box-shadow: inset -65px 3px 235px -37px rgba(0,0,0,0.75);
+}
+
+.s3 {
+    left: 147px;
+    top: -17px;
+    height: 286px;
+    transform: perspective(600px) rotateY(29deg);
+    -webkit-box-shadow: inset 77px 37px 235px -37px rgba(0,0,0,0.41);
+    -moz-box-shadow: inset 77px 37px 235px -37px rgba(0,0,0,0.41);
+    box-shadow: inset 77px 37px 235px -37px rgba(0,0,0,0.41);
+}
+
+.s4 {
+    left: 208px;
+    height: 299px;
+    top: -23px;
+    transform: perspective(600px) rotateY(-74deg);
+    -webkit-box-shadow: inset -65px 3px 235px -37px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset -65px 3px 235px -37px rgba(0,0,0,0.75);
+    box-shadow: inset -65px 3px 235px -37px rgba(0,0,0,0.75);
+}
+
+.s5 {
+    left: 281px;
+    top: -37px;
+    height: 327px;
+    width: 134px;
+    -webkit-box-shadow: inset -60px -109px 235px 0px rgba(0,0,0,0.08);
+    -moz-box-shadow: inset -60px -109px 235px 0px rgba(0,0,0,0.08);
+    box-shadow: inset -60px -109px 235px 0px rgba(0,0,0,0.08);
+}
+
+
 /* ---- Customize jQuery-dialog ---- */
 .ui-dialog .ui-dialog-titlebar {
     background-color: #e75152;
@@ -75,8 +131,8 @@
 #my-brochure {
     position: absolute;
     width: 561px;
-    top: 233px;
-    left: 39%;
+    top: 278px;
+    left: 43%;
 }
 
 .buttons.left {
@@ -333,7 +389,7 @@ footer {
 
 @media (max-width: 816px) {
     .brochure-container {
-        height: auto;
+        height: calc(100vh - 64px);
         width: 100%;
         margin: 0;
     }
@@ -344,7 +400,10 @@ footer {
     }
 
     #my-brochure {
-        position: unset;
+        position: relative;
+        top: 52px;
+        left: 11%;
+        right: 0;
         display: block;
         margin: auto;
     }
