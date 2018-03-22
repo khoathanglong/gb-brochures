@@ -2,57 +2,87 @@
 .slice {
     position: absolute;
     float: left;
-    width: 112px;
     height: 272px;
+    width: 112px;
     background-size: cover;
 }
 
 .s1 {
     height: 250px;
-    -webkit-box-shadow: inset -60px 1px 235px 0px rgba(0,0,0,0.23);
-    -moz-box-shadow: inset -60px 1px 235px 0px rgba(0,0,0,0.23);
-    box-shadow: inset -60px 1px 235px 0px rgba(0,0,0,0.23);
+    width: 103px;
+    -webkit-box-shadow: inset -60px 1px 235px 0px rgba(0, 0, 0, 0.23);
+    -moz-box-shadow: inset -60px 1px 235px 0px rgba(0, 0, 0, 0.23);
+    box-shadow: inset -60px 1px 235px 0px rgba(0, 0, 0, 0.23);
 }
 
 .s2 {
-    left: 74px;
+    left: 65px;
     top: -10px;
     transform: perspective(600px) rotateY(-69deg);
-    -webkit-box-shadow: inset -65px 3px 235px -37px rgba(0,0,0,0.75);
-    -moz-box-shadow: inset -65px 3px 235px -37px rgba(0,0,0,0.75);
-    box-shadow: inset -65px 3px 235px -37px rgba(0,0,0,0.75);
+    -webkit-box-shadow: inset -65px 3px 235px -37px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset -65px 3px 235px -37px rgba(0, 0, 0, 0.75);
+    box-shadow: inset -65px 3px 235px -37px rgba(0, 0, 0, 0.75);
 }
 
 .s3 {
-    left: 147px;
+    left: 138px;
     top: -17px;
     height: 286px;
     transform: perspective(600px) rotateY(29deg);
-    -webkit-box-shadow: inset 77px 37px 235px -37px rgba(0,0,0,0.41);
-    -moz-box-shadow: inset 77px 37px 235px -37px rgba(0,0,0,0.41);
-    box-shadow: inset 77px 37px 235px -37px rgba(0,0,0,0.41);
+    -webkit-box-shadow: inset 77px 37px 235px -37px rgba(0, 0, 0, 0.41);
+    -moz-box-shadow: inset 77px 37px 235px -37px rgba(0, 0, 0, 0.41);
+    box-shadow: inset 77px 37px 235px -37px rgba(0, 0, 0, 0.41);
 }
 
 .s4 {
-    left: 208px;
+    left: 199px;
     height: 299px;
     top: -23px;
     transform: perspective(600px) rotateY(-74deg);
-    -webkit-box-shadow: inset -65px 3px 235px -37px rgba(0,0,0,0.75);
-    -moz-box-shadow: inset -65px 3px 235px -37px rgba(0,0,0,0.75);
-    box-shadow: inset -65px 3px 235px -37px rgba(0,0,0,0.75);
+    -webkit-box-shadow: inset -65px 3px 235px -37px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset -65px 3px 235px -37px rgba(0, 0, 0, 0.75);
+    box-shadow: inset -65px 3px 235px -37px rgba(0, 0, 0, 0.75);
 }
 
 .s5 {
-    left: 281px;
+    left: 272px;
     top: -37px;
     height: 327px;
     width: 134px;
-    -webkit-box-shadow: inset -60px -109px 235px 0px rgba(0,0,0,0.08);
-    -moz-box-shadow: inset -60px -109px 235px 0px rgba(0,0,0,0.08);
-    box-shadow: inset -60px -109px 235px 0px rgba(0,0,0,0.08);
+    -webkit-box-shadow: inset -60px -109px 235px 0px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: inset -60px -109px 235px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: inset -60px -109px 235px 0px rgba(0, 0, 0, 0.08);
 }
 
+.s6 {
+    left: 364px;
+    transform: perspective(600px) rotateY(-74deg);
+    height: 355px;
+    top: -51px;
+    -webkit-box-shadow: inset -65px 3px 235px -37px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset -65px 3px 235px -37px rgba(0, 0, 0, 0.75);
+    box-shadow: inset -65px 3px 235px -37px rgba(0, 0, 0, 0.75);
+}
+
+.s7 {
+    top: -69px;
+    left: 437px;
+    height: 391px;
+    width: 159px;
+    -webkit-box-shadow: inset -60px -109px 235px 0px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: inset -60px -109px 235px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: inset -60px -109px 235px 0px rgba(0, 0, 0, 0.08);
+}
+
+.s8 {
+    left: 577px;
+    height: 416px;
+    top: -82px;
+    transform: perspective(600px) rotateY(-44deg);
+    -webkit-box-shadow: inset 64px 0px 181px 25px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: inset 64px 0px 181px 25px rgba(0, 0, 0, 0.4);
+    box-shadow: inset 64px 0px 181px 25px rgba(0, 0, 0, 0.4);
+}
 
 /* ---- Customize jQuery-dialog ---- */
 .ui-dialog .ui-dialog-titlebar {
@@ -98,7 +128,7 @@
 /* ---- Content ---- */
 .brochure-container {
     position: relative;
-    height: calc(100vh - 65px);
+    height: calc(100vh - 302px);
     width: 70%;
     margin-left: 15%;
 }
@@ -131,7 +161,7 @@
 #my-brochure {
     position: absolute;
     width: 561px;
-    top: 278px;
+    top: 64px;
     left: 43%;
 }
 
@@ -147,9 +177,9 @@
     border: 2px solid #e75152;
     padding: 10px 20px;
     margin-bottom: 7px;
-    -webkit-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
-    -moz-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
-    box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
+    -webkit-box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 1);
+    box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 1);
     transition: 0.3s ease;
 }
 
@@ -222,9 +252,9 @@
     margin: 0 20px 20px 20px;
     padding: 10px;
     border: 1px solid lightgrey;
-    -webkit-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
-    -moz-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
-    box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
+    -webkit-box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 1);
+    box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 1);
     color: #545252;
 }
 
@@ -262,9 +292,9 @@
     margin-bottom: 20px;
     border: 1px solid lightgrey;
     float: left;
-    -webkit-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
-    -moz-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
-    box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
+    -webkit-box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 1);
+    box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 1);
 }
 
 .chosen-services h3, .chosen-services p {
@@ -294,9 +324,9 @@
     border-radius: 3px;
     border: 1px solid lightgrey;
     background-color: white;
-    -webkit-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
-    -moz-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
-    box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
+    -webkit-box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 1);
+    box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 1);
 }
 
 .service-card:hover {
@@ -355,10 +385,79 @@ footer {
 }
 
 /* --- Media Queries --- */
-@media (max-width: 1002px) {
+@media (max-width: 1200px) {
     #my-brochure {
-        width: 545px;
-        left: 40%;
+        left: 47%;
+    }
+
+    .s1 {
+        height: 179px;
+        width: 73px;
+    }
+
+    .s2 {
+        left: 42px;
+        top: -6px;
+        height: 189px;
+        width: 80px;
+    }
+
+    .s3 {
+        left: 92px;
+        top: -9px;
+        height: 194px;
+        width: 81px;
+    }
+
+    .s4 {
+        left: 124px;
+        top: -15px;
+        height: 205px;
+        width: 114px;
+    }
+
+    .s5 {
+        left: 198px;
+        top: -26px;
+        height: 226px;
+        width: 95px;
+    }
+
+    .s6 {
+        left: 254px;
+        top: -34px;
+        height: 243px;
+        width: 100px;
+    }
+
+    .s7 {
+        left: 319px;
+        top: -45px;
+        height: 264px;
+        width: 118px;
+    }
+
+    .s8 {
+        left: 418px;
+        top: -54px;
+        height: 282px;
+    }
+}
+
+@media (max-width: 1090px) {
+    #my-brochure {
+        left: 41%;
+    }
+
+    .brochure-container {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media (max-width: 982px) {
+    #my-brochure {
+        left: 38%;
     }
 }
 
@@ -367,13 +466,19 @@ footer {
         width: 100%;
     }
 
-    #my-brochure {
-        left: 51%;
-        width: 90%;
+    .brochure-container {
+        height: calc(100vh - 64px);
+        margin-left: 7%;
     }
 
-    .brochure-container {
-        margin-left: 7%;
+    #my-brochure {
+        position: relative;
+        top: 52px;
+        left: 0;
+        right: 0;
+        width: 90%;
+        display: block;
+        margin: auto;
     }
 }
 
@@ -388,23 +493,8 @@ footer {
 }
 
 @media (max-width: 816px) {
-    .brochure-container {
-        height: calc(100vh - 64px);
-        width: 100%;
-        margin: 0;
-    }
-
     .printable-container {
         width: 53%;
-        margin: auto;
-    }
-
-    #my-brochure {
-        position: relative;
-        top: 52px;
-        left: 11%;
-        right: 0;
-        display: block;
         margin: auto;
     }
 
@@ -424,6 +514,10 @@ footer {
     .printable-container {
         width: 75%;
     }
+}
+
+@media (max-width: 530px) {
+
 }
 
 @media (max-width: 421px) {

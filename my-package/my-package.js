@@ -1,4 +1,5 @@
 var pdf = '';
+var newLoaded = true;
 
 $(document).ready(function () {
     // arrow to scroll down
@@ -7,6 +8,10 @@ $(document).ready(function () {
             scrollTop: $(".chosen-services").offset().top - 100
         }, 500);
     });
+
+    // hides all brochure elements
+    hideBrochure();
+
 
     // get and display data from local storage
     getChosenPackages();
@@ -72,6 +77,10 @@ $(document).ready(function () {
     });
 });
 
+function hideBrochure() {
+    $("#my-brochure").children().hide();
+}
+
 // Adds the chosen services to the pdf to download.
 function addToPdf(item) {
     pdf.addPage(239.75, 582.25);
@@ -88,6 +97,8 @@ function deletePackage(id) {
     localStorage.clickcount = Number(localStorage.clickcount) - 1;
     $("#num-packages").html(localStorage.clickcount);
     $("#amount").html(localStorage.clickcount);
+    hideBrochure();
+    getChosenPackages();
 }
 
 // Fetches chosen packages from local storage
@@ -95,9 +106,20 @@ function getChosenPackages() {
     for (var i = 0; i < localStorage.length; i++) {
         var key = localStorage.key(i);
         if (key !== 'clickcount') {
-            showPackage(localStorage.getItem(localStorage.key(i)));
+            var item = localStorage.getItem(localStorage.key(i));
+            if(newLoaded) showPackage(item);
+            showInBrochure(item, i);
         }
     }
+    newLoaded = false;
+}
+
+// Shows the chosen services in a brochure
+function showInBrochure(item, i) {
+    var $page = $(".s"+i);
+    var service = getService(item);
+    $page.css("background-image", "url('" + service.getBrochureImg() + "'");
+    $page.show();
 }
 
 // Goes through the service array and fetches the current service.
