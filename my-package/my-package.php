@@ -12,6 +12,9 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:900" rel="stylesheet">
     <!-- Simple grid -->
     <link rel="stylesheet" href="../css/simple-grid.css">
+    <!-- jQuery -->
+    <link rel="stylesheet" href="../css/jquery-ui.theme.min.css">
+    <link rel="stylesheet" href="../css/jquery-ui.min.css">
     <!-- Own stylesheets -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="my-package.css">
@@ -19,8 +22,11 @@
     <!------ SCRIPTS ------->
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
     <!-- Font Awesome -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <!-- jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
 </head>
 <body>
 <header>
@@ -33,6 +39,14 @@
         </ul>
     </div>
 </header>
+
+<div id="dialog-confirm" title="Send it to my mail">
+    <form method="post">
+        <label for="mail">Please enter your eMail here:</label>
+        <input type="email" name="mail" placeholder="example@globuzzer.com"
+               class="text ui-widget-content ui-corner-all">
+    </form>
+</div>
 
 <div class="container">
     <div class="row">
@@ -47,11 +61,21 @@
                 <p class="check-point"><span><i class="fas fa-check"></i></span> 5 services</p>
 
                 <div class="buttons left">
-                    <a href="#" class="edge-btn-pink">Save it in PDF</a>
-                    <a href="#" class="edge-btn-white">Send it to my email</a>
+                    <a href="#" class="edge-btn-pink" id="pdf-btn">Save it in PDF</a>
+                    <a href="#" class="edge-btn-white" id="email-btn">Send it to my email</a>
                 </div>
             </div>
-            <img src="../img/mockups%2002.png" alt="brochure" id="my-brochure">
+            <!--img src="../img/mockups%2002.png" alt="brochure" id="my-brochure"-->
+            <div id="my-brochure" class="view">
+                <div class="slice s1" style="background-image: url(../img/1.jpg); "></div>
+                <div class="slice s2" style="background-image: url(../img/2.jpg); "></div>
+                <div class="slice s3" style="background-image: url(../img/3.jpg); "></div>
+                <div class="slice s4" style="background-image: url(../img/4.jpg); "></div>
+                <div class="slice s5" style="background-image: url(../img/5.jpg); "></div>
+                <div class="slice s6"></div>
+                <div class="slice s7"></div>
+                <div class="slice s8"></div>
+            </div>
         </div>
     </div>
 </div>
@@ -77,82 +101,31 @@
             <h3>Aren't these the services you wanted?</h3>
             <p>Delete the ones you are not interested in or go back and add the ones you missed.</p>
             <hr class="shortHr">
-
-            <!--div class="service-card">
-                <div class="img" style="background-image: url('../img/service1.png')"></div>
-                <div class="service-card-desc">
-                    <h1>Transport</h1>
-                    <p>Lorem ipsum dolor sit amet<br>
-                        Lorem ipsum dolor...</p>
-                    <hr>
-                    <a href="#" class="delete-btn">Delete</a>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="img" style="background-image: url('../img/service2.png')"></div>
-                <div class="service-card-desc">
-                    <h1>Boat Trip</h1>
-                    <p>Lorem ipsum dolor sit amet<br>
-                        Lorem ipsum dolor...</p>
-                    <hr>
-                    <a href="#" class="delete-btn">Delete</a>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="img" style="background-image: url('../img/service5.png')"></div>
-                <div class="service-card-desc">
-                    <h1>Museum Tour</h1>
-                    <p>Lorem ipsum dolor sit amet<br>
-                        Lorem ipsum dolor...</p>
-                    <hr>
-                    <a href="#" class="delete-btn">Delete</a>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="img" style="background-image: url('../img/service6.png')"></div>
-                <div class="service-card-desc">
-                    <h1>Nature</h1>
-                    <p>Lorem ipsum dolor sit amet<br>
-                        Lorem ipsum dolor...</p>
-                    <hr>
-                    <a href="#" class="delete-btn">Delete</a>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="img" style="background-image: url('../img/service7.png')"></div>
-                <div class="service-card-desc">
-                    <h1>Local food tour</h1>
-                    <p>Lorem ipsum dolor sit amet<br>
-                        Lorem ipsum dolor...</p>
-                    <hr>
-                    <a href="#" class="delete-btn">Delete</a>
-                </div>
-            </div>
-        </div-->
+        </div>
     </div>
-</div>
 
-<footer>
-    <div class="privacy-copyright">
-        <ul class="socialmedia">
-            <li><a href="https://www.globuzzer.com/"><img class="gb-icon" src="../img/GB%20icon.png" alt="gb-icon"></a>
-            </li>
-            <li><a href="https://www.facebook.com/Globuzzer/"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="https://twitter.com/globuzzer"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://www.pinterest.at/globuzzer/"><i class="fab fa-pinterest"></i></a></li>
-            <li><a href="https://www.linkedin.com/company/globuzzer"><i class="fab fa-linkedin-in"></i></a></li>
-        </ul>
-        <ul class="nav-bar">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
-            <li><a href="#">Contact us</a></li>
-        </ul>
-        <br>
-        <p class="copyright">&copy; Copyright statement</p>
-    </div>
-</footer>
+    <footer>
+        <div class="privacy-copyright">
+            <ul class="socialmedia">
+                <li><a href="https://www.globuzzer.com/"><img class="gb-icon" src="../img/GB%20icon.png" alt="gb-icon"></a>
+                </li>
+                <li><a href="https://www.facebook.com/Globuzzer/"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://twitter.com/globuzzer"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.pinterest.at/globuzzer/"><i class="fab fa-pinterest"></i></a></li>
+                <li><a href="https://www.linkedin.com/company/globuzzer"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+            <ul class="nav-bar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+            <br>
+            <p class="copyright">&copy; Copyright statement</p>
+        </div>
+    </footer>
 
-<script type="text/javascript" src="../js/script.js"></script>
-<script type="text/javascript" src="my-package.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+    <script type="text/javascript" src="package.js"></script>
+    <script type="text/javascript" src="my-package.js"></script>
 </body>

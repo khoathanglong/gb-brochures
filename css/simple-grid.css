@@ -50,7 +50,6 @@ body {
 }
 
 .row [class^="col"] {
-  float: left;
   min-height: 0.125rem;
 }
 
