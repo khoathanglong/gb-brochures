@@ -27,7 +27,6 @@ a {
     text-decoration: none;
 }
 
-
 /* ---------- HEADER ----------- */
 .menu {
     position: fixed;
@@ -38,9 +37,9 @@ a {
     background-color: #303030;
     color: #fff;
     height: 80px;
-    -webkit-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
-    -moz-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
-    box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
+    -webkit-box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 1);
+    box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 1);
 }
 
 #mobilemenu {
@@ -94,6 +93,19 @@ a {
     opacity: 0.7;
 }
 
+#num-packages {
+    position: relative;
+    top: -15px;
+    line-height: 15px;
+    background-color: white;
+    color: #cf4848;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 3px;
+    padding: 2px;
+    margin: 2px;
+}
+
 .img-header {
     position: relative;
     margin-top: 80px;
@@ -109,7 +121,7 @@ a {
     height: calc(100vh - 80px);
 }
 
-#header-moving-down{
+#header-moving-down {
     position: absolute;
     color: #fff;
     font-size: 20px;
@@ -120,7 +132,8 @@ a {
     z-index: 1;
 
 }
-#header-moving-down a{
+
+#header-moving-down a {
     color: inherit;
 }
 
@@ -168,13 +181,13 @@ a {
     /*for firefox*/
     -moz-appearance: none;
     /*for chrome*/
-    -webkit-appearance:none;
+    -webkit-appearance: none;
     border: 3px solid #cf4848;
     border-radius: 5%;
     font-weight: 700;
     color: #595858;
     overflow: hidden;
-    background: url('../img/arrow.png') no-repeat right rgba(255,255,255,0.7);
+    background: url('../img/arrow.png') no-repeat right rgba(255, 255, 255, 0.7);
     background-size: 20px 22px;
     background-position: 95% 50%;
     padding-top: 5px;
@@ -260,9 +273,9 @@ a {
     background-color: white;
     border: 2px solid lightgrey;
     border-radius: 2%;
-    -webkit-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
-    -moz-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
-    box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
+    -webkit-box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 1);
+    box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 1);
     -webkit-transition: all 200ms ease-in;
     -webkit-transform: scale(1);
     -ms-transition: all 200ms ease-in;
@@ -324,9 +337,9 @@ a {
     border-radius: 20px;
     font-weight: 800;
     font-size: 14px;
-    -webkit-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
-    -moz-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
-    box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
+    -webkit-box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 1);
+    box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 1);
 }
 
 .buttons {
@@ -352,7 +365,7 @@ a {
 }
 
 .button-pink, .button-pink-dark {
-    color:#fff;
+    color: #fff;
     background-color: #e75152;
 }
 
@@ -384,9 +397,9 @@ a {
     padding-top: 30px;
     height: 0;
     overflow: hidden;
-    -webkit-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
-    -moz-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
-    box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
+    -webkit-box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 1);
+    box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 1);
 }
 
 .youtube-wrapper iframe,
@@ -402,273 +415,294 @@ a {
 /* -- Brochure Viewer -- */
 .brochure-viewer {
     color: #fff;
-    background-image: url('../img/background pattern behind the brochure.png') ;
+    background-image: url('../img/background pattern behind the brochure.png');
     height: auto;
 
-    font-size: calc(100%*1.);
+    font-size: calc(100% * 1);
     position: relative;
     padding-top: 75px;
     padding-bottom: 75px;
 }
 
-.brochure-viewer .welcome-text{
+.brochure-viewer .welcome-text {
     position: relative;
-    top:170px;
+    top: 170px;
 }
+
 /*.brochure-viewer .welcome-text div{
     position: absolute;
 
 }*/
 
-.brochure-viewer .row{
+.brochure-viewer .row {
     position: relative;
 
 }
+
 .brochure-viewer .normalArrow {
     position: absolute;
     width: 70%;
-    bottom:-80px;
-    right:60px;
+    bottom: -80px;
+    right: 60px;
 }
-.brochure-viewer .mobileArrow{
+
+.brochure-viewer .mobileArrow {
     display: none;
 }
 
-.brochure-viewer .container{
-    padding:100px 0;
+.brochure-viewer .container {
+    padding: 100px 0;
 }
 
-
-.brochure-viewer .col-6>img{
-    padding:100px 0;
+.brochure-viewer .col-6 > img {
+    padding: 100px 0;
 }
-
 
 .brochure-viewer h1 {
     text-transform: uppercase;
-    font-size: calc(100%*3.5);
+    font-size: calc(100% * 3.5);
     font-weight: bold;
     color: #ffffff;
 }
 
 .brochure-viewer p {
     font-weight: normal;
-    font-size: calc(100%*1.5);
-    color:#ededed;
+    font-size: calc(100% * 1.5);
+    color: #ededed;
     margin-bottom: 10px;
 }
 
-#moving-down-icon{
-        display: none;
-        text-align: center;
-        font-size: 4em;
-} 
+#moving-down-icon {
+    display: none;
+    text-align: center;
+    font-size: 4em;
+}
+
 #moving-down-icon p {
-        font-size: 48px;
-        color: #fff;
-        margin-bottom: 40px;
-}   
-    /* -- Brochure Viewer Detail-- */
-    .brochure-viewer .book-cover:hover{
-        cursor: pointer;
-    }
-    .brochure-viewer .nameTag {
-        position: absolute;
-        top:30%;
-        font-size: 2em;
-        display: inline-block;
-        background-color: #E84F51;
-        font-weight: bold;
-        padding:10px 10px 10px 40px;
-    }
-        .nameTag:hover{
-            cursor: pointer;
-        }
-    .brochure-viewer .detailTour{
-        background-color: #ECECEC;
-        position: absolute;
-        top: 0;
-        width: 35%;
-        height: 100%;
-        color: #151515;
-    }
-    .brochure-viewer .detailTour div {
-        position: relative;
-        width: 90%;
-        margin:0 auto;
-    }
-    .brochure-viewer .detailTour div h1 {
-        color: #E75152;
-        font-size: 2em;
-    }
-    .brochure-viewer .detailTour div p {
-        color:#3D3D3D;
-        font-size: 2em;
-    }
-    .brochure-viewer .detailTour div a{
-        margin-top: 20px;
-        float: right;
-    }
-   .brochure-viewer .heart-check{
-      position: absolute;
-      top:50%;
-      left:50%;
-      font-size: 40px;
-      color: white;
-      visibility: hidden;
-      opacity: 0;
-    }
-     .brochure-viewer .heart-check:hover{
-      opacity: 1;
-    }
-    .brochure-viewer .heart-check svg:hover{
-        cursor: pointer;
-    }
-   
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 40px;
+}
 
-    .brochure-viewer .footnote{
-        background-color: #252525;
-        text-align: center;
-        padding:20px 0;
-        visibility: hidden;
-    }
-    .brochure-viewer .footnote .fa-circle{
-        padding:0 2px;
-    }
+/* -- Brochure Viewer Detail-- */
+.brochure-viewer .book-cover:hover {
+    cursor: pointer;
+}
 
-    .brochure-viewer .footnote .bigCircle{
-        color:#E84F51;
-        font-size: 200%;
-        vertical-align: middle;
-        padding:0 15px;
-    }
-    .nextPage, .prevPage{
-        font-size: 2em;
-        background-size: cover;
-        border-radius: 50%;
-        width: 40px;
-        background-repeat: no-repeat;
-        text-align: center;
-        opacity: 0;
-    }
-    .nextPage:hover, .prevPage:hover {
-        cursor: pointer;
-        opacity: 1;
-    }
-    .nextPage{
-        position: absolute;
-        top:50%;
-        right: 2%;
-        background-size: cover;
-        background-image: url(../img/service6.png);
-        text-align: center;
-    }
-   
-    .prevPage{
-        position: absolute;
-        top: 50%;
-        left: 2%;
-        background-image: url(../img/service4.jpg);
-    }
-    .extend-resize{
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        color:red;
-        cursor: pointer;
-        z-index: 2;
-        visibility: hidden;
-    }
-        .extend-resize .extend{
-            width: 1.5em;
-        }
-         .extend-resize .resize{
-            width: 1.5em;
-        }
-    /*create image slide show*/
-    .brochure{
-        display: none;
-        position: relative;
-        opacity: 0.8;
-    }
+.brochure-viewer .nameTag {
+    position: absolute;
+    top: 30%;
+    font-size: 2em;
+    display: inline-block;
+    background-color: #E84F51;
+    font-weight: bold;
+    padding: 10px 10px 10px 40px;
+}
 
-    .brochure .lastBrochure {
-        position: absolute;
-        top: 30%;
-        left: 30%;
-    }
-    .brochure .lastBrochure div {
-        margin:20px auto;
-    }
-    .brochure .lastBrochure a {
-        display: block;
-        width:10em;
-        text-align: center;
-        margin:20px auto;
-    }
+.nameTag:hover {
+    cursor: pointer;
+}
 
+.brochure-viewer .detailTour {
+    background-color: #ECECEC;
+    position: absolute;
+    top: 0;
+    width: 35%;
+    height: 100%;
+    color: #151515;
+}
+
+.brochure-viewer .detailTour div {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.brochure-viewer .detailTour div h1 {
+    color: #E75152;
+    font-size: 2em;
+}
+
+.brochure-viewer .detailTour div p {
+    color: #3D3D3D;
+    font-size: 2em;
+}
+
+.brochure-viewer .detailTour div a {
+    margin-top: 20px;
+    float: right;
+}
+
+.brochure-viewer .heart-check {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 40px;
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.brochure-viewer .heart-check:hover {
+    opacity: 1;
+}
+
+.brochure-viewer .heart-check svg:hover {
+    cursor: pointer;
+}
+
+.brochure-viewer .footnote {
+    background-color: #252525;
+    text-align: center;
+    padding: 20px 0;
+    visibility: hidden;
+}
+
+.brochure-viewer .footnote .fa-circle {
+    padding: 0 2px;
+}
+
+.brochure-viewer .footnote .bigCircle {
+    color: #E84F51;
+    font-size: 200%;
+    vertical-align: middle;
+    padding: 0 15px;
+}
+
+.nextPage, .prevPage {
+    font-size: 2em;
+    background-size: cover;
+    border-radius: 50%;
+    width: 40px;
+    background-repeat: no-repeat;
+    text-align: center;
+    opacity: 0;
+}
+
+.nextPage:hover, .prevPage:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.nextPage {
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    background-size: cover;
+    background-image: url(../img/service6.png);
+    text-align: center;
+}
+
+.prevPage {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    background-image: url(../img/service4.jpg);
+}
+
+.extend-resize {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: red;
+    cursor: pointer;
+    z-index: 2;
+    visibility: hidden;
+}
+
+.extend-resize .extend {
+    width: 1.5em;
+}
+
+.extend-resize .resize {
+    width: 1.5em;
+}
+
+/*create image slide show*/
+.brochure {
+    display: none;
+    position: relative;
+    opacity: 0.8;
+}
+
+.brochure .lastBrochure {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+}
+
+.brochure .lastBrochure div {
+    margin: 20px auto;
+}
+
+.brochure .lastBrochure a {
+    display: block;
+    width: 10em;
+    text-align: center;
+    margin: 20px auto;
+}
 
 /* -- Service-Thumbnails -- */
-#filterForm{
+#filterForm {
     margin-top: 40px;
     margin-bottom: 20px;
-    display:flex;
+    display: flex;
     justify-content: flex-end;
 }
 
-#filterForm  form {
+#filterForm form {
     margin-right: 15px;
 }
-#filter  select, #featured  select {
-    -webkit-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
-    -moz-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
-    box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
+
+#filter select, #featured select {
+    -webkit-box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 1);
+    box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 1);
     text-align: center;
     text-align: center;
     text-align-last: center; /*for mozzila*/
 }
 
-#featured  option {
+#featured option {
     text-align: left;
 }
+
 #filter select {
-      /*for firefox*/
+    /*for firefox*/
     -moz-appearance: none;
     /*for chrome*/
-    -webkit-appearance:none;
+    -webkit-appearance: none;
     border: 3px solid #cf4848;
     border-radius: 5%;
     font-weight: 700;
     color: #595858;
     overflow: hidden;
-    background: url('../img/arrow.png') no-repeat right rgba(255,255,255,0.7);
+    background: url('../img/arrow.png') no-repeat right rgba(255, 255, 255, 0.7);
     background-size: 20px 22px;
     background-position: 95% 50%;
-    padding:5px 20px 5px 8px;
+    padding: 5px 20px 5px 8px;
     width: 170px;
 }
 
-
 .fine-hr {
     clear: both;
-    border:none;
+    border: none;
     border-bottom: solid 2.5px rgb(207, 72, 72)
 
 }
 
-#supplementalDiv{
-    background-color:#CDCDCD;
+#supplementalDiv {
+    background-color: #CDCDCD;
     height: 20px;
 }
+
 .services {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;  
+    margin-top: 20px;
 }
 
 .thumbnail-container {
- margin:calc(100%/50);
-
+    margin: calc(100% / 90);
+    float: left;
 }
 
 .thumbnail-container .heart, .thumbnail-container .check {
@@ -686,12 +720,11 @@ a {
 .hover-container {
     position: relative;
     width: 100%;
-    padding-top:100%; /*make height equal to width*/
-    -webkit-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
-    -moz-box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
-    box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
+    padding-top: 100%; /*make height equal to width*/
+    -webkit-box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 1);
+    box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 1);
 }
-
 
 .service-desc {
     color: #fff;
@@ -714,7 +747,7 @@ a {
     object-fit: cover;
 }
 
-.color-overlay, .service-desc,.thumbnail {
+.color-overlay, .service-desc, .thumbnail {
     position: absolute;
     top: 0;
     right: 0;
@@ -724,6 +757,7 @@ a {
     opacity: 0;
     text-align: center;
 }
+
 .thumbnail {
     opacity: 0.8;
     height: 100%;
@@ -732,6 +766,7 @@ a {
     background-size: cover;
     backface-visibility: hidden;
 }
+
 .color-overlay {
     background-color: #e75152;
 }
@@ -744,9 +779,11 @@ a {
     cursor: pointer;
     opacity: 1;
 }
-#services-block{
+
+#services-block {
     margin-bottom: 40px;
 }
+
 /* ---------- FOOTER ------------ */
 /*---- Pink footer-part ----*/
 .contact {
@@ -846,18 +883,17 @@ a {
     }
 }*/
 
-@media (max-width: 1196px){
-    .brochure-viewer .welcome-text{
-        top:100px;
+@media (max-width: 1196px) {
+    .brochure-viewer .welcome-text {
+        top: 100px;
     }
 }
 
-@media (max-width: 1030px){
-    .brochure-viewer .welcome-text p{
+@media (max-width: 1030px) {
+    .brochure-viewer .welcome-text p {
         font-size: 18px
     }
 }
-
 
 @media (max-width: 960px) {
     .contact .section-heading, .address, .mail-phone, .contact-btn {
@@ -870,82 +906,78 @@ a {
     .address, .mail-phone, .contact-btn {
         height: 50px;
     }
+
     /*intro for small screen*/
-    .intro{
-        top:25%;
+    .intro {
+        top: 25%;
         left: 10%;
-        margin:0;
-        padding:0;
+        margin: 0;
+        padding: 0;
     }
+
     .intro h2 {
         font-size: 2.5em;
     }
 
     .intro p {
-  
+
         font-size: 1.5em;
     }
 
-    
-
     /* -- Brochure Viewer for Small Sceen-- */
-
-    .brochure-viewer .welcome-text{
+    .brochure-viewer .welcome-text {
         position: relative;
-        top:0;
+        top: 0;
         display: flex;
         justify-content: center;
     }
-    .brochure-viewer .welcome-text h1{
+
+    .brochure-viewer .welcome-text h1 {
         font-size: 108px;
     }
 
-
-     .brochure-viewer .welcome-text p{
+    .brochure-viewer .welcome-text p {
         font-size: 30px;
-        color:#ededed;
+        color: #ededed;
     }
 
-    .brochure-viewer .nameTag{
+    .brochure-viewer .nameTag {
         font-size: 1em;
     }
 
     .brochure-viewer .detailTour div h1 {
         font-size: 1.5em;
     }
-    .brochure-viewer .detailTour div p  {
+
+    .brochure-viewer .detailTour div p {
         font-size: 1em;
     }
-    .brochure-viewer .detailTour div a{
+
+    .brochure-viewer .detailTour div a {
         font-size: 10px;
         width: 5em;
     }
-    .brochure-viewer .arrow{
+
+    .brochure-viewer .arrow {
         text-align: center;
 
     }
+
     .brochure-viewer .normalArrow {
         display: none;
     }
 
     .brochure-viewer .mobileArrow {
-        display:initial;
-        padding:100px 0;
+        display: initial;
+        padding: 100px 0;
     }
 
-    .services{
-        flex-flow: row wrap;
-    }
-
-
-   .thumbnail-container {
-
-        flex-basis: 33%; /*let a block takes up 33% of the flex row for responsive*/
+    .thumbnail-container {
+        width: 31%; /*let a block takes up 31% of the flex row for responsive*/
         text-align: center;
     }
 
-    .hover-container{   
-
+    .hover-container {
         margin-right: auto;
         margin-left: auto;
         /*width: 200px;
@@ -953,86 +985,84 @@ a {
     }
 
     .thumbnail-container .heart, .thumbnail-container .check {
-        height:80px;
-        float:none;
+        height: 80px;
+        float: none;
         margin-top: 20px;
 
-       text-shadow: 2px 2px rgba(0,0,0,1);
+        text-shadow: 2px 2px rgba(0, 0, 0, 1);
     }
-   
 
     #mobileButtons {
-        display:flex;
+        display: flex;
         justify-content: center;
         background-color: #E75152;
-        padding:10px 0;
-        border-top: solid 4px #AD4248 ;
-        border-bottom:solid 4px #AD4248 ;
-        border-left: solid 2px #AD4248 ;
-        border-right:solid 2px #AD4248 ;
+        padding: 10px 0;
+        border-top: solid 4px #AD4248;
+        border-bottom: solid 4px #AD4248;
+        border-left: solid 2px #AD4248;
+        border-right: solid 2px #AD4248;
 
     }
-    #mobileButtons div{
+
+    #mobileButtons div {
         cursor: pointer;
         text-align: center;
         font-family: Roboto;
         font-size: 38px;
         font-weight: bold;
-        color:#fff;
+        color: #fff;
         border: solid 3px #585252;
         flex-basis: 40%;
         width: 100%;
-        padding:15px 20px;
+        padding: 15px 20px;
 
+    }
 
-   }
-   #filterButton{
-      border-radius: 8px 0 0 8px;
-      background-color: #949494;
-   }
-    #featureButton{
-      border-radius: 0 8px 8px 0;
-      background-color: #BDBDBD;
-   }
-    
+    #filterButton {
+        border-radius: 8px 0 0 8px;
+        background-color: #949494;
+    }
 
-    #filterForm{
+    #featureButton {
+        border-radius: 0 8px 8px 0;
+        background-color: #BDBDBD;
+    }
+
+    #filterForm {
         max-width: 100%;
-        background-color: #C74746;
-        margin-top: 0;
+        /*background-color: #C74746;*/
+        margin-top: 20px;
         justify-content: center;
     }
 
     #filter div {
         cursor: pointer;
         width: 100%;
-        margin:25px 0;
+        margin: 25px 0;
 
-   }
-   #filter div p{
+    }
+
+    #filter div p {
 
         display: inline-block;
         font-size: 2em;
         font-weight: normal;
-        color:#fff;
-        margin:0 15px;
-   }
-    
-    #moving-down-icon{
-        display: block;  
-    } 
+        color: #fff;
+        margin: 0 15px;
+    }
 
+    #moving-down-icon {
+        display: block;
+    }
 
-    #moving-down-icon a{
+    #moving-down-icon a {
         color: inherit;
     }
-    #header-moving-down{
+
+    #header-moving-down {
         font-size: 4em;
 
-}
-   
-    
- 
+    }
 
 }
 
@@ -1084,31 +1114,33 @@ a {
         height: 20px;
     }
 
-    .brochure-viewer .welcome-text h1{
+    .brochure-viewer .welcome-text h1 {
         font-size: 90px;
     }
 
-    .brochure-viewer .welcome-text p{
+    .brochure-viewer .welcome-text p {
         font-size: 30px;
-        color:#ededed;
+        color: #ededed;
     }
 
     .brochure-viewer .mobileArrow {
-        height:480px ;
+        height: 480px;
     }
 
-    #filter div p{
+    #filter div p {
         font-size: 24px;
-   }
+    }
 
-   .brochure-viewer .detailTour div h1 {
+    .brochure-viewer .detailTour div h1 {
 
         font-size: 1em;
     }
-    .brochure-viewer .detailTour div p  {
+
+    .brochure-viewer .detailTour div p {
         font-size: 0.5em;
     }
-    .brochure-viewer .detailTour div a{
+
+    .brochure-viewer .detailTour div a {
         font-size: 0.5em;
         width: 5em;
         padding: 4px;
@@ -1118,41 +1150,49 @@ a {
         top: 25%;
         left: 25%;
     }
+
     .brochure .lastBrochure div {
-        margin:20px auto;
+        margin: 20px auto;
     }
+
     .brochure .lastBrochure a {
-        width:8em;
+        width: 8em;
         font-size: 10px;
     }
 }
 
-
 @media (max-width: 666px) {
+    .thumbnail-container {
+        width: 47%;
+    }
+
     .address, .mail-phone, .contact-btn {
         height: 100px;
     }
 
-     .brochure-viewer .welcome-text h1{
+    .brochure-viewer .welcome-text h1 {
         font-size: 80px;
     }
 
-     .brochure-viewer .welcome-text p{
+    .brochure-viewer .welcome-text p {
         font-size: 25px;
-        color:#ededed;
-    }
-    .brochure-viewer .mobileArrow {
-        height:400px ;
+        color: #ededed;
     }
 
-    .brochure-viewer .heart-check{
+    .brochure-viewer .mobileArrow {
+        height: 400px;
+    }
+
+    .brochure-viewer .heart-check {
         font-size: 20px
     }
-    .nextPage, .prevPage{
+
+    .nextPage, .prevPage {
         width: 20px;
         border-radius: 50%;
     }
-    .nextPage a, .prevPage a{
+
+    .nextPage a, .prevPage a {
         font-size: 16px;
         vertical-align: middle;
     }
@@ -1161,23 +1201,24 @@ a {
         top: 25%;
         left: 25%;
     }
+
     .brochure .lastBrochure h2 {
         font-size: 1em;
     }
+
     .brochure .lastBrochure a {
-        width:8em;
-        padding:4px;
+        width: 8em;
+        padding: 4px;
         font-size: 6px;
     }
 
-    .thumbnail-container .heart, .thumbnail-container .check{
+    .thumbnail-container .heart, .thumbnail-container .check {
         height: 50px;
     }
 }
 
-@media (max-width: 500px){
-     .brochure .lastBrochure {
-
+@media (max-width: 500px) {
+    .brochure .lastBrochure {
         top: 20%;
         left: 20%;
     }
@@ -1209,34 +1250,36 @@ a {
         margin-left: 20px;
     }
 
-
-     .brochure-viewer .welcome-text h1{
+    .brochure-viewer .welcome-text h1 {
         font-size: 80px;
     }
 
-     .brochure-viewer .welcome-text p{
+    .brochure-viewer .welcome-text p {
 
         font-size: 20px;
-        color:#ededed;
+        color: #ededed;
     }
 
     .brochure-viewer .mobileArrow {
-        height:320px ;
+        height: 320px;
     }
-    .brochure-viewer .footnote .fa-circle{
-         font-size: 80%;
+
+    .brochure-viewer .footnote .fa-circle {
+        font-size: 80%;
 
     }
-    .brochure-viewer .footnote .bigCircle{
+
+    .brochure-viewer .footnote .bigCircle {
         font-size: 150%;
     }
-    #mobileButtons div{
+
+    #mobileButtons div {
         font-size: 24px;
     }
 
-    #filter div p{  /*got problem with @media: does not work at the right size*/
+    #filter div p { /*got problem with @media: does not work at the right size*/
         font-size: 16px;
-   }
+    }
 
 }
 
@@ -1252,7 +1295,7 @@ a {
     }
 
     .menu li {
-        background-color: rgba(255,255,255,0.7);
+        background-color: rgba(255, 255, 255, 0.7);
         line-height: 50px;
         width: 100%;
         text-align: center;
@@ -1271,30 +1314,49 @@ a {
         width: 70%;
     }
 
-      .brochure-viewer .welcome-text h1{
+    .brochure-viewer .welcome-text h1 {
         font-size: 60px;
     }
 
-     .brochure-viewer .welcome-text p{
+    .brochure-viewer .welcome-text p {
         font-size: 16px;
-        color:#ededed;
+        color: #ededed;
     }
-    #filter div p{
+
+    #filter div p {
         font-size: 12px;
-        margin-left: 1;
+        margin-left: 1px;
         margin-right: 1px;
-   }
+    }
 
     .brochure-viewer .detailTour div h1 {
         font-size: 0.7em;
     }
-    .brochure-viewer .detailTour div p  {
+
+    .brochure-viewer .detailTour div p {
         font-size: 0.3em;
     }
-    .brochure-viewer .detailTour div a{
+
+    .brochure-viewer .detailTour div a {
         font-size: 0.2em;
         width: 5em;
         padding: 2px;
+    }
+
+    .thumbnail-container {
+        width: 75%;
+        margin-left: 12.5%;
+    }
+
+    #filterForm {
+        display: block;
+    }
+
+    #filterForm select {
+        width: 60%;
+        margin: 10px 20%;
+        line-height: 30px;
+        font-size: 15px;
     }
 }
 
@@ -1304,32 +1366,37 @@ a {
         margin-left: 10%;
     }
 
-     .brochure-viewer .nameTag{
+    .brochure-viewer .nameTag {
         font-size: 6px;
     }
+
     .brochure .lastBrochure {
         top: 30%;
         left: 30%;
     }
+
     .brochure .lastBrochure h2 {
         font-size: 0.5em;
     }
+
     .brochure .lastBrochure a {
-        margin:5px auto;
-        width:7.5em;
-        padding:2px;
+        margin: 5px auto;
+        width: 7.5em;
+        padding: 2px;
         font-size: 4px;
     }
-    #moving-down-icon p{
+
+    #moving-down-icon p {
         font-size: 0.5em;
     }
-   .thumbnail-container .heart, .thumbnail-container .check{
+
+    .thumbnail-container .heart, .thumbnail-container .check {
         height: 30px;
     }
 }
 
 @media (max-width: 304px) {
-     #filter div p{
+    #filter div p {
         font-size: 10px;
-   }
+    }
 }
