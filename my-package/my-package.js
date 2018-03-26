@@ -45,7 +45,22 @@ $(document).ready(function () {
         },
         buttons: {
             "Send": function () {
-                $(this).dialog("close");
+                var $email = $("#email").val();
+                var mailPDF = createPDF();
+                var pdfBase64 = mailPDF.output('datauristring');
+
+                if($email === "" || !validateEmail($email)) {
+                    $("#warning").show();
+                } else {
+                    $(this).dialog("close");
+                    window.plugin.email.open({
+                        to: [$email],
+                        subject: 'New PDF!',
+                        body: 'Hi there, here is that new PDF you wanted!',
+                        isHTML: false,
+                        attachments: [pdfBase64]
+                    });
+                }
             },
             Cancel: function () {
                 $(this).dialog("close");
@@ -56,27 +71,40 @@ $(document).ready(function () {
     // Open email modal
     $("#email-btn").click(function (e) {
         e.preventDefault();
+        $("#warning").hide();
         dialog.dialog("open");
     });
 
     // Downloads pdf
     $("#pdf-btn").click(function (e) {
         e.preventDefault();
-
-        pdf = new jsPDF("1", "pt");
-        pdf.deletePage(1);
-
-        for (var i = 0; i < localStorage.length; i++) {
-            var key = localStorage.key(i);
-            if (key !== 'clickcount') {
-                var item = localStorage.getItem(localStorage.key(i));
-                addToPdf(item);
-            }
-        }
-        pdf.save('My-package.pdf');
+        var thisPDF = createPDF();
+        thisPDF.save('My-package.pdf');
     });
 });
 
+function createPDF() {
+    pdf = new jsPDF("1", "pt");
+    pdf.deletePage(1);
+
+    for (var i = 0; i < localStorage.length; i++) {
+        var key = localStorage.key(i);
+        if (key !== 'clickcount') {
+            var item = localStorage.getItem(localStorage.key(i));
+            addToPdf(item);
+        }
+    }
+
+    return pdf;
+}
+
+// validates email address
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+// hides the brochure
 function hideBrochure() {
     $("#my-brochure").children().hide();
 }

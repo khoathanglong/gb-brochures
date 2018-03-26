@@ -1,3 +1,43 @@
+// Added successfully dialog
+var success = $("#service-added").dialog({
+    autoOpen: false,
+    resizable: false,
+    draggable: false,
+    height: "auto",
+    width: 400,
+    modal: true,
+    show: {
+        effect: "fadeIn", duration: 300
+    },
+    hide: {
+        effect: "fadeOut", duration: 300
+    },
+    open: function(event, ui){
+        setTimeout("$('#service-added').dialog('close')",1000);
+    }
+});
+
+// Service exists dialog
+var fail = $("#service-exists").dialog({
+    autoOpen: false,
+    resizable: false,
+    draggable: false,
+    height: "auto",
+    width: 400,
+    modal: true,
+    show: {
+        effect: "fadeIn", duration: 300
+    },
+    hide: {
+        effect: "fadeOut", duration: 300
+    },
+    buttons: {
+        "OK": function () {
+            $(this).dialog("close");
+        }
+    }
+});
+
 $(document).ready(function () {
     //toggle mobile menu
     $('#mobilemenu').click(function() {
@@ -54,7 +94,7 @@ function addItem(id) {
     console.log(id);
     console.log(localStorage[id]);
     if(localStorage[id]) {
-        alert("You have already chosen this service!");
+        fail.dialog("open");
     } else {
         if(typeof(Storage) !== "undefined") {
             if (localStorage.clickcount) {
@@ -66,5 +106,6 @@ function addItem(id) {
             $numPackages.show();
         }
         localStorage.setItem(id, id);
+        success.dialog("open");
     }
 }

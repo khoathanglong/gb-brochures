@@ -31,7 +31,7 @@ a {
 .menu {
     position: fixed;
     top: 0;
-    z-index: 10;
+    z-index: 1000000000000;
     width: 100%;
     max-width: 100vw;
     background-color: #303030;
@@ -265,6 +265,10 @@ a {
     margin-top: 50px;
 }
 
+.package-col {
+    float: left;
+}
+
 .package {
     position: relative;
     margin: 60px auto;
@@ -467,7 +471,7 @@ a {
 
 .brochure-viewer p {
     font-weight: normal;
-    font-size: calc(100% * 1.5);
+    font-size: 20px;
     color: #ededed;
     margin-bottom: 10px;
 }
@@ -489,6 +493,34 @@ a {
     cursor: pointer;
 }
 
+#slideshow {
+    left: -476px;
+    z-index: 1;
+}
+
+.img-even, .img-odd {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.img-even {
+    object-position: left;
+}
+
+.img-odd {
+    object-position: right;
+}
+
+.nameTag .show-more {
+    font-size: 20px;
+    text-align: center;
+}
+
+#brochure-cover {
+    background-size: cover;
+}
+
 .brochure-viewer .nameTag {
     position: absolute;
     top: 30%;
@@ -505,11 +537,23 @@ a {
 
 .brochure-viewer .detailTour {
     background-color: #ECECEC;
+    display: none;
     position: absolute;
     top: 0;
-    width: 35%;
+    width: 65%;
     height: 100%;
     color: #151515;
+}
+
+.close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #151515;
+}
+
+.close-btn:hover {
+    cursor: pointer;
 }
 
 .brochure-viewer .detailTour div {
@@ -535,12 +579,11 @@ a {
 
 .brochure-viewer .heart-check {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    z-index: 10;
+    top: 48%;
+    left: 48%;
     font-size: 40px;
     color: white;
-    visibility: hidden;
-    opacity: 0;
 }
 
 .brochure-viewer .heart-check:hover {
@@ -552,10 +595,9 @@ a {
 }
 
 .brochure-viewer .footnote {
-    background-color: #252525;
     text-align: center;
     padding: 20px 0;
-    visibility: hidden;
+    display: none;
 }
 
 .brochure-viewer .footnote .fa-circle {
@@ -625,21 +667,47 @@ a {
     opacity: 0.8;
 }
 
-.brochure .lastBrochure {
+.lastBrochure {
     position: absolute;
-    top: 30%;
-    left: 30%;
+    top: 37%;
+    z-index: 35;
+    width: 100%;
+    text-align: center;
 }
 
-.brochure .lastBrochure div {
+.introduction .col-6 {
+    float: left;
+}
+
+.lastBrochure div {
     margin: 20px auto;
 }
 
-.brochure .lastBrochure a {
+.lastBrochure a {
     display: block;
     width: 10em;
     text-align: center;
     margin: 20px auto;
+}
+
+/* --- jQuery dialog --- */
+.ui-dialog .ui-dialog-titlebar {
+    display: none;
+}
+
+.ui-dialog .ui-dialog-content {
+    min-height: 27px !important;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.ui-dialog .ui-dialog-buttonpane {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 /* -- Service-Thumbnails -- */
@@ -932,6 +1000,12 @@ a {
         justify-content: center;
     }
 
+    #slideshow {
+        left: 0;
+        width: 100% !important;
+        height: 400px !important;
+    }
+
     .brochure-viewer .welcome-text h1 {
         font-size: 108px;
     }
@@ -1066,7 +1140,7 @@ a {
 
 }
 
-@media (max-width: 765px) {
+@media (max-width: 768px) {
     .privacy-copyright {
         text-align: center;
     }
@@ -1114,6 +1188,8 @@ a {
         height: 20px;
     }
 
+
+
     .brochure-viewer .welcome-text h1 {
         font-size: 90px;
     }
@@ -1132,7 +1208,6 @@ a {
     }
 
     .brochure-viewer .detailTour div h1 {
-
         font-size: 1em;
     }
 

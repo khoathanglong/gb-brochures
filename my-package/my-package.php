@@ -43,8 +43,9 @@
 <div id="dialog-confirm" title="Send it to my mail">
     <form method="post">
         <label for="mail">Please enter your eMail here:</label>
-        <input type="email" name="mail" placeholder="example@globuzzer.com"
+        <input id="email" type="email" name="mail" placeholder="example@globuzzer.com"
                class="text ui-widget-content ui-corner-all">
+        <p id="warning">Please enter a valid eMail!</p>
     </form>
 </div>
 
