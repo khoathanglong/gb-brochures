@@ -48,6 +48,9 @@
         <p id="warning">Please enter a valid eMail!</p>
     </form>
 </div>
+<div id="mail-sent">
+    eMail sent successfully!
+</div>
 
 <div class="container">
     <div class="row">
@@ -80,6 +83,10 @@
         </div>
     </div>
 </div>
+
+<?php
+    require_once 'mail.php';
+?>
 
 <div class="light-grey-box">
     <div class="arrow-container">

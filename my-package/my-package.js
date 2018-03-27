@@ -11,8 +11,6 @@ $(document).ready(function () {
 
     // hides all brochure elements
     hideBrochure();
-
-
     // get and display data from local storage
     getChosenPackages();
 
@@ -27,6 +25,25 @@ $(document).ready(function () {
     $(".delete-btn").click(function (e) {
         e.preventDefault();
         deletePackage($(this).parent().parent().attr('id'));
+    });
+
+    // Sent successfully dialog
+    var mailSuccess = $("#mail-sent").dialog({
+        autoOpen: false,
+        resizable: false,
+        draggable: false,
+        height: "auto",
+        width: 400,
+        modal: true,
+        show: {
+            effect: "fadeIn", duration: 300
+        },
+        hide: {
+            effect: "fadeOut", duration: 300
+        },
+        open: function(event, ui){
+            setTimeout("$('#mail-sent').dialog('close')",1000);
+        }
     });
 
     // Email dialog
@@ -53,12 +70,11 @@ $(document).ready(function () {
                     $("#warning").show();
                 } else {
                     $(this).dialog("close");
-                    window.plugin.email.open({
-                        to: [$email],
-                        subject: 'New PDF!',
-                        body: 'Hi there, here is that new PDF you wanted!',
-                        isHTML: false,
-                        attachments: [pdfBase64]
+                    // ajax to send data to php-file
+                    $.post("mail.php", { data: pdfBase64, mail: $email },
+                    function (){}).done(function(data) {
+                        mailSuccess.dialog("open");
+                        $(".container").append(data);
                     });
                 }
             },
