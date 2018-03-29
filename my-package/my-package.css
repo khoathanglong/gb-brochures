@@ -163,6 +163,10 @@
     margin-right: 20px;
 }
 
+.check-point i {
+    font-style: normal;
+}
+
 #my-brochure {
     position: absolute;
     width: 561px;
@@ -212,38 +216,6 @@
     float: left;
     width: 100%;
     background-color: #e5e5e5;
-}
-
-.arrow-container {
-    text-align: center;
-    padding: 20px 0;
-    color: #7a7977;
-    font-size: 20px;
-}
-
-.arrow-container p {
-    width: 100px;
-    margin: auto;
-    -webkit-transition: all 200ms ease-in;
-    -webkit-transform: scale(1);
-    -ms-transition: all 200ms ease-in;
-    -ms-transform: scale(1);
-    -moz-transition: all 200ms ease-in;
-    -moz-transform: scale(1);
-    transition: all 200ms ease-in;
-    transform: scale(1);
-}
-
-.arrow-container p:hover {
-    -webkit-transition: all 200ms ease-in;
-    -webkit-transform: scale(1.2);
-    -ms-transition: all 200ms ease-in;
-    -ms-transform: scale(1.2);
-    -moz-transition: all 200ms ease-in;
-    -moz-transform: scale(1.2);
-    transition: all 200ms ease-in;
-    transform: scale(1.2);
-    cursor: pointer;
 }
 
 .service-container {

@@ -51,6 +51,9 @@
 <div id="mail-sent">
     eMail sent successfully!
 </div>
+<div id="delete-confirm">
+    Are you sure, you want to delete this service?
+</div>
 
 <div class="container">
     <div class="row">
@@ -62,7 +65,7 @@
                 </h2>
                 <p class="check-point"><span><i class="fas fa-check"></i></span> 6 hours package</p>
                 <p class="check-point"><span><i class="fas fa-check"></i></span> Discover Sweden</p>
-                <p class="check-point"><span><i class="fas fa-check"></i></span> 5 services</p>
+                <p class="check-point"><span><i class="fas fa-check"></i></span> <i class="amount">5</i> services chosen</p>
 
                 <div class="buttons left">
                     <a href="#" class="edge-btn-pink" id="pdf-btn">Save it in PDF</a>
@@ -95,7 +98,7 @@
     <div class="service-container">
         <div class="basket">
             <p id="curr-package">Discover Sweden in 6 hours</p>
-            <p><span id="amount">5</span> services</p>
+            <p><span class="amount">5</span> services</p>
             <hr>
             <p class="total-price"><span class="price-label">Price:</span> <span id="price">99€</span></p>
             <hr>

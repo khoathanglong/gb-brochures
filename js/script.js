@@ -4,7 +4,6 @@ var success = $("#service-added").dialog({
     resizable: false,
     draggable: false,
     height: "auto",
-    width: 400,
     modal: true,
     show: {
         effect: "fadeIn", duration: 300
@@ -23,7 +22,6 @@ var fail = $("#service-exists").dialog({
     resizable: false,
     draggable: false,
     height: "auto",
-    width: 400,
     modal: true,
     show: {
         effect: "fadeIn", duration: 300
@@ -76,8 +74,18 @@ $(document).ready(function () {
     });
 
     // Store service in local storage, if check symbol is clicked
-    $(".check").click(function() {
+    $(".check").click(function(e) {
+        e.preventDefault();
         addItem($(this).parent().attr('id'));
+        setThumbnailState();
+        // looks if the current service in the brochure has been chosen
+        // to mark it as checked if necessary.
+        var currPage = $slideshow.turn('page');
+        var currService = getCurrentService(currPage);
+        console.log(currService);
+        if(localStorage[currService]) {
+            setChosenState();
+        }
     });
 
     // Shows the number of chosen services in the package

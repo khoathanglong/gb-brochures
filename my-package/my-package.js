@@ -16,15 +16,38 @@ $(document).ready(function () {
 
     // set amount in cart to the right number
     if (localStorage.clickcount) {
-        $("#amount").html(localStorage.clickcount);
+        $(".amount").html(localStorage.clickcount);
     } else {
-        $("#amount").html(0);
+        $(".amount").html(0);
     }
 
     // Delete Service
     $(".delete-btn").click(function (e) {
         e.preventDefault();
-        deletePackage($(this).parent().parent().attr('id'));
+        var that = $(this);
+        // Delete confirm
+        $("#delete-confirm").dialog({
+            autoOpen: true,
+            resizable: false,
+            draggable: false,
+            height: "auto",
+            modal: true,
+            show: {
+                effect: "drop", duration: 300
+            },
+            hide: {
+                effect: "drop", duration: 300
+            },
+            buttons: {
+                "Yes": function () {
+                    $(this).dialog("close");
+                    deletePackage($(that).parent().parent().attr('id'));
+                },
+                Cancel: function () {
+                    $(this).dialog("close");
+                }
+            }
+        });
     });
 
     // Sent successfully dialog
@@ -45,6 +68,8 @@ $(document).ready(function () {
             setTimeout("$('#mail-sent').dialog('close')",1000);
         }
     });
+
+
 
     // Email dialog
     var dialog = $("#dialog-confirm").dialog({
@@ -99,6 +124,7 @@ $(document).ready(function () {
     });
 });
 
+// Creates a jsPDF file of the chosen services.
 function createPDF() {
     pdf = new jsPDF("1", "pt");
     pdf.deletePage(1);
@@ -140,7 +166,7 @@ function deletePackage(id) {
     $("#" + id).remove();
     localStorage.clickcount = Number(localStorage.clickcount) - 1;
     $("#num-packages").html(localStorage.clickcount);
-    $("#amount").html(localStorage.clickcount);
+    $(".amount").html(localStorage.clickcount);
     hideBrochure();
     getChosenPackages();
 }
