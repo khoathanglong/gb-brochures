@@ -47,23 +47,42 @@ $(document).ready(function () {
         var currCity = $(this).val();
         var imgURL = '';
         var intro = '';
+        var p = '';
+        var quote = '';
 
         switch(currCity) {
             case 'stockholm':
                 imgURL = 'img/raphael-andres-430356.png';
                 intro = 'Discover Sweden';
+                p = 'Explore, enjoy and experience.';
+                quote = 'Sit amet consectetur adipisicing elit, sed do eiusmo. Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim\n' +
+                    '                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';
+                $(".sweden").show();
+                $(".finland").hide();
                 break;
             case 'oslo':
                 imgURL = 'img/Oslo.jpg';
                 intro = 'Discover Norway';
+                p = 'Explore, enjoy and experience.';
+                quote = 'Sit amet consectetur adipisicing elit, sed do eiusmo. Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim\n' +
+                    '                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';
                 break;
             case 'helsinki':
                 imgURL = 'img/Helsinki.jpg';
                 intro = 'Discover Finland';
+                p = 'Explore, enjoy and experience.';
+                quote = 'Discover Helsinki like a local. Globuzzer offers you tailored travel packages that will ensure the best experience in a short time.<br>' +
+                    'Most trips are made from a touristic point of view, but ours is designed by locals to get a true Finnish experience. <br>' +
+                    'Discover the most amazing places Helsinki and Finland have to offer. ';
+                $(".sweden").hide();
+                $(".finland").show();
                 break;
             case 'copenhagen':
                 imgURL = 'img/Copenhagen2.jpg';
                 intro = 'Discover Denmark';
+                p = 'Explore, enjoy and experience.';
+                quote = 'Sit amet consectetur adipisicing elit, sed do eiusmo. Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim\n' +
+                    '                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';
                 break;
             default:
                 break;
@@ -71,6 +90,8 @@ $(document).ready(function () {
 
         $('.img-header').css("background-image", "url('" + imgURL + "'");
         $('.intro h2').text(intro);
+        $('.intro p').text(p);
+        $('.quote p').html(quote);
     });
 
     // Store service in local storage, if check symbol is clicked
@@ -82,7 +103,6 @@ $(document).ready(function () {
         // to mark it as checked if necessary.
         var currPage = $slideshow.turn('page');
         var currService = getCurrentService(currPage);
-        console.log(currService);
         if(localStorage[currService]) {
             setChosenState();
         }
@@ -102,7 +122,20 @@ function addItem(id) {
     console.log(id);
     console.log(localStorage[id]);
     if(localStorage[id]) {
-        fail.dialog("open");
+        // removes item from local storage
+        localStorage.removeItem(id);
+        localStorage.clickcount = Number(localStorage.clickcount) - 1;
+        $numPackages.html(localStorage.clickcount);
+        // sets thumbnails to the right state
+        setThumbnailState();
+        // looks, if the current opened page in the brochure is concerned.
+        var currPage = $slideshow.turn('page');
+        var currService = getCurrentService(currPage);
+        console.log(currService);
+        if(!localStorage[currService]) {
+            setChooseState();
+        }
+        //fail.dialog("open");
     } else {
         if(typeof(Storage) !== "undefined") {
             if (localStorage.clickcount) {

@@ -14,6 +14,11 @@ $(document).ready(function () {
     // get and display data from local storage
     getChosenPackages();
 
+    // Changes text in the service-container, if no services are selected.
+    if (localStorage.clickcount == 0) {
+        changeText();
+    }
+
     // set amount in cart to the right number
     if (localStorage.clickcount) {
         $(".amount").html(localStorage.clickcount);
@@ -69,8 +74,6 @@ $(document).ready(function () {
         }
     });
 
-
-
     // Email dialog
     var dialog = $("#dialog-confirm").dialog({
         autoOpen: false,
@@ -124,6 +127,12 @@ $(document).ready(function () {
     });
 });
 
+// changes text to "No Service selected"
+function changeText() {
+    $(".chosen-services h3").html("No service is selected yet!");
+    $(".chosen-services p").html("Discover our packages and select services that interest you.");
+}
+
 // Creates a jsPDF file of the chosen services.
 function createPDF() {
     pdf = new jsPDF("1", "pt");
@@ -169,6 +178,9 @@ function deletePackage(id) {
     $(".amount").html(localStorage.clickcount);
     hideBrochure();
     getChosenPackages();
+    if(localStorage.clickcount == 0) {
+        changeText();
+    }
 }
 
 // Fetches chosen packages from local storage

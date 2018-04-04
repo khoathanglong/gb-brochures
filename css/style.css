@@ -121,6 +121,10 @@ a {
     height: calc(100vh - 80px);
 }
 
+.img-header.finland-header {
+    background-image: url('../img/finland/Cathedral-rucksack-magazine-193179-unsplash.jpg');
+}
+
 #header-moving-down {
     position: absolute;
     color: #fff;
@@ -304,6 +308,10 @@ a {
     left: 0;
     right: 0;
     margin-top: 50px;
+}
+
+.finland {
+    display: none;
 }
 
 .package-col {
@@ -523,7 +531,7 @@ a {
 }
 
 #moving-down-icon p {
-    font-size: 48px;
+    font-size: 29px;
     color: #fff;
     margin-bottom: 40px;
 }
@@ -545,11 +553,11 @@ a {
 }
 
 .img-even {
-    object-position: left;
+    object-position: right;
 }
 
 .img-odd {
-    object-position: right;
+    object-position: left;
 }
 
 .nameTag .show-more {
@@ -639,8 +647,10 @@ a {
     position: absolute;
     z-index: 10;
     top: 86%;
-    left: 38.5%;
-    width: 27%;
+    left: 0;
+    right: 0;
+    width: 233px;
+    margin: auto;
     font-size: 34px;
     color: white;
 }
@@ -1096,7 +1106,11 @@ a {
     #slideshow {
         left: 0;
         width: 100% !important;
-        height: 400px !important;
+        height: 500px !important;
+    }
+
+    .brochure-viewer .heart-check {
+        top: 95%;
     }
 
     .brochure-viewer .welcome-text h1 {
@@ -1117,11 +1131,11 @@ a {
     }
 
     .brochure-viewer .detailTour div p {
-        font-size: 1em;
+        font-size: 0.85em;
     }
 
     .brochure-viewer .detailTour div a {
-        font-size: 10px;
+        font-size: 12px;
         width: 5em;
     }
 
@@ -1137,6 +1151,10 @@ a {
     .brochure-viewer .mobileArrow {
         display: initial;
         padding: 100px 0;
+    }
+
+    .lastBrochure {
+        top: 80%;
     }
 
     .thumbnail-container {
@@ -1165,7 +1183,6 @@ a {
         border-bottom: solid 4px #AD4248;
         border-left: solid 2px #AD4248;
         border-right: solid 2px #AD4248;
-
     }
 
     #mobileButtons div {
@@ -1216,14 +1233,13 @@ a {
     }
 
     #moving-down-icon {
+        margin-top: 25px;
         display: block;
     }
 
     #moving-down-icon a {
         color: inherit;
     }
-
-
 }
 
 @media (max-width: 768px) {
@@ -1473,6 +1489,14 @@ a {
         width: 70%;
     }
 
+    #slideshow {
+        height: 200px !important;
+    }
+
+    .brochure-viewer .detailTour {
+        width: 100%;
+    }
+
     .brochure-viewer .welcome-text h1 {
         font-size: 60px;
     }
@@ -1482,24 +1506,43 @@ a {
         color: #ededed;
     }
 
+    .brochure-viewer .detailTour div h1 {
+        font-size: 1em;
+    }
+
+    .brochure-viewer .detailTour div p {
+        height: 59px;
+        font-size: 0.7em;
+        overflow: hidden;
+    }
+
+    .brochure-viewer .detailTour div a {
+        font-size: 0.7em;
+        width: 5em;
+        padding: 5px 14px;
+        margin-top: 0;
+    }
+
     #filter div p {
         font-size: 12px;
         margin-left: 1px;
         margin-right: 1px;
     }
 
-    .brochure-viewer .detailTour div h1 {
-        font-size: 0.7em;
+    .lastBrochure {
+        top: 71.5%;
     }
 
-    .brochure-viewer .detailTour div p {
-        font-size: 0.3em;
+    .lastBrochure h2 {
+        padding-bottom: 18px;
     }
 
-    .brochure-viewer .detailTour div a {
-        font-size: 0.2em;
-        width: 5em;
-        padding: 2px;
+    .lastBrochure .button-pink {
+        padding: 10px 20px;
+    }
+
+    .brochure-viewer .heart-check {
+        top: 95.5%;
     }
 
     .thumbnail-container {
@@ -1538,7 +1581,7 @@ a {
     }
 
     .brochure-viewer .nameTag {
-        font-size: 6px;
+        font-size: 19px;
     }
 
     .brochure .lastBrochure {
