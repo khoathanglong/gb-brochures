@@ -252,28 +252,34 @@ function markChosenService(page) {
 function getCurrentService(page) {
     switch(page) {
         case 2: case 3:
-            return 'service1';
-            break;
+        return 'service9';
+        break;
         case 4: case 5:
-            return 'service2';
-            break;
+        return 'service10';
+        break;
         case 6: case 7:
-            return 'service3';
-            break;
+        return 'service11';
+        break;
         case 8: case 9:
-            return 'service4';
-            break;
+        return 'service12';
+        break;
         case 10: case 11:
-            return 'service5';
-            break;
+        return 'service13';
+        break;
         case 12: case 13:
-            return 'service6';
-            break;
+        return 'service14';
+        break;
         case 14: case 15:
-            return 'service7';
-            break;
+        return 'service15';
+        break;
         case 16: case 17:
-            return 'service8';
-            break;
+        return 'service16';
+        break;
+        case 18: case 19:
+        return 'service17';
+        break;
+        case 20: case 21:
+        return 'service18';
+        break;
     }
 }

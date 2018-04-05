@@ -1485,6 +1485,10 @@ a {
         display: inline-block;
     }
 
+    .menu .desc {
+        margin-left: 6px;
+    }
+
     .package {
         width: 70%;
     }

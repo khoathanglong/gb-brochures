@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-    <title>Globuzzer - 6-hours</title>
+    <title>Globuzzer - My package</title>
 
     <!------ STYLESHEETS ------->
     <!-- Google Fonts -->
@@ -56,6 +56,11 @@
 </div>
 
 <div class="container">
+    <div class="row back-to-services">
+        <div class="col-12">
+            <a href="../6-hours-package-fin/6hours.html" class="edge-btn-pink">Back to services...</a>
+        </div>
+    </div>
     <div class="row">
         <div class="col-12 brochure-container">
             <div class="printable-container">
@@ -63,8 +68,8 @@
                     Here you can find your<br>
                     <span>printable brochure</span>
                 </h2>
-                <p class="check-point"><span><i class="fas fa-check"></i></span> 6 hours package</p>
-                <p class="check-point"><span><i class="fas fa-check"></i></span> Discover Sweden</p>
+                <p class="check-point"><span><i class="fas fa-check"></i></span> Your Package</p>
+                <p class="check-point"><span><i class="fas fa-check"></i></span> Discover Finland</p>
                 <p class="check-point"><span><i class="fas fa-check"></i></span> <i class="amount">5</i> services chosen</p>
 
                 <div class="buttons left">
@@ -97,13 +102,13 @@
     </div>
     <div class="service-container">
         <div class="basket">
-            <p id="curr-package">Discover Sweden in 6 hours</p>
-            <p><span class="amount">5</span> services</p>
+            <p id="curr-package">Discover Finland</p>
+            <p><span class="amount">0</span> services</p>
             <hr>
             <p class="total-price"><span class="price-label">Price:</span> <span id="price">99€</span></p>
             <hr>
             <div class="buttons">
-                <a href="../6-hours-package/6hours.html" class="button-pink">Add more</a>
+                <a href="../6-hours-package-fin/6hours.html" class="button-pink">Add more</a>
                 <a class="button-white">Checkout</a>
             </div>
         </div>
